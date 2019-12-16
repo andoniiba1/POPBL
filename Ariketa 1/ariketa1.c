@@ -6,7 +6,7 @@ int main(int argc, char* argv[])
     int x, y, z, a;
     char str[128];
 
-    printf("Emaidazu hiru zenbaki espazioekin: ");
+    printf("Emaidazu lau zenbaki espazioekin: ");
     fgets(str, 128, stdin);
     sscanf(str, "%d %d %d", &x, &y, &z);
     if (x > y) {
