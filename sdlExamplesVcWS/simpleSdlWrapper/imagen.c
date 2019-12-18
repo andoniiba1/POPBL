@@ -67,14 +67,12 @@ void  irudiaMugitu( int numImg , int x, int y)
   irudiak[id].dest.y = y;
 }
 
-void irudiakMarraztu(void)
+void irudiakMarraztu(int a)
 {
-  int i = 0;
-
-  for (i = 0; i < irudiKop; i++)
-  {
-    irudiaMarraztu(irudiak[i].texture, &irudiak[i].dest);
-  }
+  
+  
+    irudiaMarraztu(irudiak[a].texture, &irudiak[a].dest);
+  
 }
 
 

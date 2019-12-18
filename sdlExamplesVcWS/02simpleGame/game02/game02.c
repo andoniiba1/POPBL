@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <windows.h>
 
-#define ONGI_ETORRI_MEZUA "Sakatu return hasteko..."
+#define ONGI_ETORRI_MEZUA "Sakatu hasteko..."
 #define JOKOA_SOUND ".\\sound\\132TRANCE_02.wav"
 #define JOKOA_PLAYER_IMAGE ".\\img\\invader.bmp"
 #define JOKOA_SOUND_WIN ".\\sound\\BugleCall.wav"
@@ -56,11 +56,11 @@ EGOERA jokatu(void)
   zirkulua.pos.y = 200;
   //Uint32 time01 = SDL_GetTicks(), time02;
 
-  jokalaria.pos.x = 0;
+  jokalaria.pos.x = 600;
   jokalaria.pos.y = 200;
 
   audioInit();
-  loadTheMusic(JOKOA_SOUND);
+  loadTheMusic(JOKOA_SOUND_WIN);
   playMusic();
   jokalaria.id = JOKOA_jokalariaIrudiaSortu();
   do {
@@ -76,12 +76,12 @@ EGOERA jokatu(void)
     ebentu = ebentuaJasoGertatuBada();
     if (ebentu == SAGU_BOTOIA_ESKUMA || ebentu == SAGU_BOTOIA_EZKERRA) 
     {
-      mugitu = 1; //true
+      mugitu = mugitu+1; //true
     }
-    if (zirkulua.pos.y + 30 > 478) {
-      zirkulua.pos.y = 0 + 30;
+    if (zirkulua.pos.y + 30 <0 ) {
+      zirkulua.pos.y = 400;
     }
-    if (mugitu) {
+    if (mugitu>5) {
       aux = ERREALITATE_FISIKOA_mugimendua(jokalaria.pos);
       jokalaria.pos.x = aux.x;
     }
@@ -100,7 +100,7 @@ EGOERA JOKOA_egoera(JOKO_ELEMENTUA jokalaria, JOKO_ELEMENTUA oztopoa) {
   if (jokalaria.pos.x >oztopoa.pos.x - 20 && jokalaria.pos.x <oztopoa.pos.x + 20 && jokalaria.pos.y >oztopoa.pos.y - 20 && jokalaria.pos.y <oztopoa.pos.y + 20) {
     ret = IRABAZI;
   }
-  else if (jokalaria.pos.x > 600) {
+  else if (jokalaria.pos.x < 0) {
     ret = GALDU;
   }
   return ret;
@@ -120,8 +120,8 @@ int JOKOA_jokalariaIrudiaSortu()
 
 
 POSIZIOA ERREALITATE_FISIKOA_mugimendua(POSIZIOA posizioa) {
-  posizioa.y = posizioa.y + 1;
-  posizioa.x = posizioa.x + 1;
+  posizioa.y = posizioa.y - 1;
+  posizioa.x = posizioa.x - 1;
   return posizioa;
 }
 

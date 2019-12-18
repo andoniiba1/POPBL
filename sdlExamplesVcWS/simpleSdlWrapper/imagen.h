@@ -5,7 +5,7 @@
 
 int  irudiaKargatu(char *fileName);
 void  irudiaMugitu(int numImg, int x, int y);
-void irudiakMarraztu(void);
+void irudiakMarraztu(int a);
 void irudiaKendu(int id);
 
 #endif

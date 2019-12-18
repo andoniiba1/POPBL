@@ -1,9 +1,2 @@
-﻿  ebentoak.c
-  graphics.c
-  imagen.c
-  soinua.c
-  text.c
-  02simpleGameMain.c
-  game02.c
-  Generando código...
+﻿  game02.c
   02simpleGame.vcxproj -> C:\Users\andoi\Downloads\sdlExamplesVcWS\Debug\02simpleGame.exe

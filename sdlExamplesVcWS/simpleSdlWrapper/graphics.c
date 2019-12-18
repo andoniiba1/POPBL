@@ -10,6 +10,10 @@
 #include "imagen.h"
 #include "graphics.h"
 
+#define screenX 1080
+#define screenY 720
+
+
 SDL_Window* window = NULL;
 SDL_Renderer* gRenderer;
 int colorR, colorG, colorB;
@@ -26,7 +30,7 @@ int sgHasieratu()
     return -1;
   }
   atexit(SDL_Quit);
-  window = SDL_CreateWindow("SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+  window = SDL_CreateWindow("SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, screenX, screenY, SDL_WINDOW_SHOWN);
   if (window == NULL)
   {
     fprintf(stderr, "Ezin lehioa sortu: %s\n", SDL_GetError());
