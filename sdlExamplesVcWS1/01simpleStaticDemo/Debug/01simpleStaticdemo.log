@@ -1,0 +1,14 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(452,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (01simpleStaticDemo.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  main.c
+C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\main.c(646,9): warning C4101:  'puntuazioa': variable local sin referencia
+C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\main.c(776,10): warning C4013:  'srand' sin definir; se supone que extern devuelve como resultado int
+C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\main.c(778,16): warning C4013:  'rand' sin definir; se supone que extern devuelve como resultado int
+C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\main.c(924,26): warning C4244:  '=': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\main.c(925,36): warning C4244:  '=': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\main.c(926,21): warning C4244:  '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\main.c(169): warning C4715:  'SDL_main': no todas las rutas de acceso de control devuelven un valor
+C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\main.c(504): warning C4715:  'aukerak': no todas las rutas de acceso de control devuelven un valor
+C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\main.c(566): warning C4715:  'redes': no todas las rutas de acceso de control devuelven un valor
+C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\main.c(766): warning C4716:  'fisika': debe devolver un valor
+C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\main.c(1189): warning C4716:  'erreseteatu': debe devolver un valor
+  01simpleStaticDemo.vcxproj -> C:\Users\andoi\Desktop\sdlExamplesVcWS1\Debug\STUDENTS LIFE.exe
