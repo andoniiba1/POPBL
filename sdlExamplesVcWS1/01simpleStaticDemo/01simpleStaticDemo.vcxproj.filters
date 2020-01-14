@@ -19,6 +19,12 @@
     <Filter Include="Header Files\headerrak">
       <UniqueIdentifier>{e0368235-37cc-4635-95f0-ef8f00044675}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\gure headerrak">
+      <UniqueIdentifier>{130e75bd-fe4f-4673-b365-7dd3445fe9b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gure funtzioak">
+      <UniqueIdentifier>{afd22666-a733-43ce-b71d-5df03417b954}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\simpleSdlWrapper\ebentoak.c">
@@ -38,6 +44,39 @@
     </ClCompile>
     <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hasierako pantailak.c">
+      <Filter>Source Files\gure funtzioak</Filter>
+    </ClCompile>
+    <ClCompile Include="testua.c">
+      <Filter>Source Files\gure funtzioak</Filter>
+    </ClCompile>
+    <ClCompile Include="program.c">
+      <Filter>Source Files\gure funtzioak</Filter>
+    </ClCompile>
+    <ClCompile Include="redes.c">
+      <Filter>Source Files\gure funtzioak</Filter>
+    </ClCompile>
+    <ClCompile Include="matematika.c">
+      <Filter>Source Files\gure funtzioak</Filter>
+    </ClCompile>
+    <ClCompile Include="irudiformak.c">
+      <Filter>Source Files\gure funtzioak</Filter>
+    </ClCompile>
+    <ClCompile Include="iratzarri.c">
+      <Filter>Source Files\gure funtzioak</Filter>
+    </ClCompile>
+    <ClCompile Include="oinarri.c">
+      <Filter>Source Files\gure funtzioak</Filter>
+    </ClCompile>
+    <ClCompile Include="fisika.c">
+      <Filter>Source Files\gure funtzioak</Filter>
+    </ClCompile>
+    <ClCompile Include="plataformak.c">
+      <Filter>Source Files\gure funtzioak</Filter>
+    </ClCompile>
+    <ClCompile Include="musika.c">
+      <Filter>Source Files\gure funtzioak</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +100,39 @@
     </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hasierako pantailak.h">
+      <Filter>Header Files\gure headerrak</Filter>
+    </ClInclude>
+    <ClInclude Include="testua.h">
+      <Filter>Header Files\gure headerrak</Filter>
+    </ClInclude>
+    <ClInclude Include="program.h">
+      <Filter>Header Files\gure headerrak</Filter>
+    </ClInclude>
+    <ClInclude Include="redes.h">
+      <Filter>Header Files\gure headerrak</Filter>
+    </ClInclude>
+    <ClInclude Include="matematika.h">
+      <Filter>Header Files\gure headerrak</Filter>
+    </ClInclude>
+    <ClInclude Include="irudiformak.h">
+      <Filter>Header Files\gure headerrak</Filter>
+    </ClInclude>
+    <ClInclude Include="iratzarri.h">
+      <Filter>Header Files\gure headerrak</Filter>
+    </ClInclude>
+    <ClInclude Include="oinarri.h">
+      <Filter>Header Files\gure headerrak</Filter>
+    </ClInclude>
+    <ClInclude Include="fisika.h">
+      <Filter>Header Files\gure headerrak</Filter>
+    </ClInclude>
+    <ClInclude Include="plataformak.h">
+      <Filter>Header Files\gure headerrak</Filter>
+    </ClInclude>
+    <ClInclude Include="musika.h">
+      <Filter>Header Files\gure headerrak</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

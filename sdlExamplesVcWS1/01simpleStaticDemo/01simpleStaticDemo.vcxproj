@@ -153,7 +153,18 @@
     <ClCompile Include="..\simpleSdlWrapper\imagen.c" />
     <ClCompile Include="..\simpleSdlWrapper\soinua.c" />
     <ClCompile Include="..\simpleSdlWrapper\text.c" />
+    <ClCompile Include="fisika.c" />
+    <ClCompile Include="hasierako pantailak.c" />
+    <ClCompile Include="iratzarri.c" />
+    <ClCompile Include="irudiformak.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="matematika.c" />
+    <ClCompile Include="musika.c" />
+    <ClCompile Include="oinarri.c" />
+    <ClCompile Include="plataformak.c" />
+    <ClCompile Include="program.c" />
+    <ClCompile Include="redes.c" />
+    <ClCompile Include="testua.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\simpleSdlWrapper\ebentoak.h" />
@@ -161,8 +172,19 @@
     <ClInclude Include="..\simpleSdlWrapper\imagen.h" />
     <ClInclude Include="..\simpleSdlWrapper\soinua.h" />
     <ClInclude Include="..\simpleSdlWrapper\text.h" />
+    <ClInclude Include="fisika.h" />
+    <ClInclude Include="hasierako pantailak.h" />
+    <ClInclude Include="iratzarri.h" />
+    <ClInclude Include="irudiformak.h" />
+    <ClInclude Include="matematika.h" />
+    <ClInclude Include="musika.h" />
+    <ClInclude Include="oinarri.h" />
     <ClInclude Include="OurTypes.h" />
+    <ClInclude Include="plataformak.h" />
+    <ClInclude Include="program.h" />
+    <ClInclude Include="redes.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="testua.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="STUDENTS LIFE.rc" />

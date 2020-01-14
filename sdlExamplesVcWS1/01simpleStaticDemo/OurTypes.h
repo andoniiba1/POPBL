@@ -2,6 +2,7 @@
 #define OURTYPES_H
 
 #include "ebentoak.h"
+#define SOINUKOP 10
 
 
 typedef enum { IRTEN, MENUA, JOKOA, INSTRUKZIOAK, KREDITUAK } PANTAILAK;
@@ -33,4 +34,12 @@ typedef struct ANIMAZIO
     int eskuin;
     
 }ANIMAZIO;
+
+IRUDIAK imagenak[32];
+PANTAILAK pantailak;
+POSIZIOA pos;
+int ebentu;
+int soniduak[SOINUKOP];
+
+
 #endif

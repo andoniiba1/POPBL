@@ -28,11 +28,11 @@ void letratamaina(int tamaina) {
     }
 }
 
-void textuaIdatzi(int x, int y, char *str)
+void textuaIdatzi(int x, int y, char *str,int r,int g,int b)
 {
   SDL_Surface* textSurface;
   SDL_Texture *mTexture;
-  SDL_Color textColor = { 0XFF, 0X00, 0XFF };
+  SDL_Color textColor = { r, g, b };
   SDL_Rect src, dst;
   SDL_Renderer* gRenderer;
 

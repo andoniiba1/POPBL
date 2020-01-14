@@ -3,6 +3,6 @@
 
 void textuaGaitu(void);
 void letratamaina(int tamaina);
-void textuaIdatzi(int x, int y, char *str);
+void textuaIdatzi(int x, int y, char *str, int r, int g, int b);
 
 #endif
