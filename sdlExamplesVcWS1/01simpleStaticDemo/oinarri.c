@@ -75,8 +75,12 @@ int oinarri(void) {
 				konsejoa[irudizenbakia].behea = 1;
 				if (konsejoa[irudizenbakia].aprobatu == 1) {
 					puntuazioa++;
+					soinua(".\\sound\\ondo.wav",1);
 				}
-				else puntuazioa--;
+				else {
+					puntuazioa--;
+					soinua(".\\sound\\gaizki.wav",10);
+				}
 			}
 
 

@@ -9,6 +9,7 @@
 #include "plataformak.h"
 
 int plataformak(void) {
+	
 	int animazio = 1, kont = 0, ezker = 0, Vy = 0, AzeY = 3, Vx = 0,  inertzia = 0,  eskuina = 1,salto=0,amaiera=0, hondoratu=0, aldaketa=0,puntuazioa=800,hil=0,soinudenbora=0;
 	float t = 0;
 	posberri.x = 5;

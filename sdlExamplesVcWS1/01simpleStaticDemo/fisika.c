@@ -8,7 +8,7 @@
 
 #include "fisika.h"
 int fisika(void) {
-	int puntuazioa=0, aldea = 0, fondoa=8, amaitu=0,txoke=0;
+	int puntuazioa=0, aldea = 0, fondoa=8, amaitu=0,txoke=0, soinudenbora=0;
 
 	pantailaGarbitu();
 	imagenak[0].id = irudiaKargatu(".\\img\\aurrea.bmp");
@@ -34,6 +34,7 @@ int fisika(void) {
 	bazterradatuak1();
 	while (pantailak == JOKOA && amaitu==0) {
 		puntuazioa++;
+		soinudenbora--;
 		ebentu = ebentuaJasoGertatuBada();
 		if (ebentu == TECLA_RIGHT)
 		{
@@ -80,6 +81,10 @@ int fisika(void) {
 			default:
 				break;
 			}
+			if (soinudenbora < 0) {
+				soinua(".\\sound\\kotxea.wav", 9);
+				soinudenbora = 500;
+			}
 		}
 		if (ebentu == TECLA_DOWN)
 		{
@@ -115,6 +120,10 @@ int fisika(void) {
 				break;
 			default:
 				break;
+			}
+			if (soinudenbora < 0) {
+				soinua(".\\sound\\kotxea.wav", 9);
+				soinudenbora = 500;
 			}
 		}
 		itxi();

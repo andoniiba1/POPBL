@@ -24,8 +24,9 @@ int iratzarri(void) {
 
 	while (irudia < 3 && errepikatu == 1 && pantailak == JOKOA)
 	{
+		soinuakkargatu();
 		musikahasi(".\\sound\\alarma.wav");
-		soinua(".\\sound\\bostezo.wav", 3);
+		soinua(".\\sound\\bostezo.wav", 2);
 		errepikatu = 0;
 		while (aldia < 35 && errepikatu==0 && pantailak == JOKOA)
 		{
@@ -71,8 +72,10 @@ int iratzarri(void) {
 			irudia++;
 		}
 	}
-	audioTerminate();
-	return 3-irudia;
+	
+	if (irudia != 4)audioTerminate();
+	soinuakkargatu();
+ 	return 3-irudia;
 }
 
 void erreseteatu(int* aldia, int* lehena, int* geio, int* bigarrena, int* segunduak, int* x, int* y) {
@@ -117,11 +120,12 @@ void etzaraesnatu(void)
 	audioTerminate();
 	
 	pantailaGarbitu();
+	irudiakpantailaratu(0, 0, 4, ".\\img\\EGIL.bmp");
 	letratamaina(50);
-	textuaIdatzi(340, 360, "ETZARA ESNATU", 0XFF, 0XFF, 0XFF);
+	textuaIdatzi(340, 300, "EZ ZARA ESNATU", 0X00, 0X00, 0X00);
 	letratamaina(30);
 	pantailaBerriztu();
 	ezkerbotoibukle();
-		
+	
 	
 }

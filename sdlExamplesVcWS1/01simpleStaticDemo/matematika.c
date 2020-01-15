@@ -8,7 +8,7 @@
 
 #include "matematika.h"
 int matematika(void) {
-	int x = 0, y = 500, aldatu = 2, mantendu = 0, gora = 0, azelerazio = 0, rebote = 0, geldidenbora = 0, geldi = 0, puntuazioa = 0;
+	int x = 0, y = 500, aldatu = 2, mantendu = 0, gora = 0, azelerazio = 0, rebote = 0, geldidenbora = 0, geldi = 0, puntuazioa = 0, egon=0;
 	int lehena = 0, geio = 0, bigarrena = 0, segunduak = 9, geio2 = 0;
 	char kronometroa[128];
 
@@ -53,8 +53,10 @@ int matematika(void) {
 
 
 
-		if (x >= 929 || rand() % 451 == 0 || x < 0) {
+		if ((x >= 929 || rand() % 451 == 0 || x < 0) && egon == 0) {
 			geldi = 1;
+			soinua(".\\sound\\mmm.wav", 3); 
+			egon = 1;
 		}
 		if (geldi == 1)geldidenbora++;
 
@@ -72,7 +74,7 @@ int matematika(void) {
 			}
 			geldidenbora = 0;
 			geldi = 0;
-
+			egon = 0;
 		}
 
 		else
@@ -84,6 +86,8 @@ int matematika(void) {
 
 		}
 	}
+	soinua(".\\sound\\arrapatuta.wav", 8);
+	SDL_Delay(2000);
 	return puntuazioa / 200;
 }
 

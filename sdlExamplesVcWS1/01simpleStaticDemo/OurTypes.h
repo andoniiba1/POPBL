@@ -2,7 +2,7 @@
 #define OURTYPES_H
 
 #include "ebentoak.h"
-#define SOINUKOP 10
+#define SOINUKOP 16
 
 
 typedef enum { IRTEN, MENUA, JOKOA, NOLAJOKATU, KREDITUAK } PANTAILAK;

@@ -26,4 +26,5 @@ void botoipantailak(void);
 void generaleraitzuli(void);
 void instrukziobakoitza(int jokoinstrukzioa, char* izena);
 void botoidatuak(void);
+void fletxabuklehurrengoa(void);
 #endif

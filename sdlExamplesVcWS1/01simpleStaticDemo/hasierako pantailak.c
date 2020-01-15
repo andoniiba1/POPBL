@@ -23,6 +23,7 @@ void kredituak(void)
 {
     pantailaGarbitu();
     irudiakpantailaratu(0, 0, 0, ".\\img\\EGILEAK.bmp");
+	irudiakpantailaratu(40, 600, 1, ".\\img\\gezia2.bmp");
     pantailaBerriztu();
 }
 void instrukzioak(void)
@@ -31,6 +32,7 @@ void instrukzioak(void)
 	instrukziopantailak = GENERALA;
     pantailaGarbitu();
     irudiakpantailaratu(0, 0, 0, ".\\img\\azalpenak nagusia.bmp");
+	irudiakpantailaratu(40, 600, 1, ".\\img\\gezia2.bmp");
     pantailaBerriztu();
 	while (pantailak == NOLAJOKATU) {
 
@@ -40,15 +42,17 @@ void instrukzioak(void)
 	}
 }
 void historia(char* historia) {
-    
+	
     pantailaGarbitu();
 
 	irudiakpantailaratu(0, 0, 0, ".\\img\\EGIL.bmp");
     parrafoaidatzi(120, 120, 60, historia, 0X00, 0X00, 0X00);
+	irudiakpantailaratu(920,580, 1, ".\\img\\gezia1.bmp");
     
 
     pantailaBerriztu();
-    ezkerbotoibukle();
+	fletxabuklehurrengoa();
+
 }
 void ezkerbotoibukle(void) {
     
@@ -62,22 +66,22 @@ void ezkerbotoibukle(void) {
 		itxi();
 
     }
-}/*
-void ezkerbotoibukle(void) {
+}
+void fletxabuklehurrengoa(void) {
 
 	while (pantailak == JOKOA) {
 		ebentu = ebentuaJasoGertatuBada();
 		if (ebentu == SAGU_BOTOIA_EZKERRA)
 		{
 			pos = saguarenPosizioa();
-			if ((pos.x > 0) && (pos.x < 70) && (pos.y > 0) && (pos.y < 70)) { return; }
+			if ((pos.x > 920) && (pos.x < 1010) && (pos.y > 580) && (pos.y < 670)) { soinua(".\\sound\\botoia.wav", 4); return; }
 			
 
 		}
 		itxi();
 
 	}
-}*/
+}
 void puntuazioa(int puntu) {
     char puntuak[128];
     pantailaGarbitu();
@@ -121,7 +125,7 @@ void botoipantailak(void) {
 	if (ebentu == SAGU_BOTOIA_EZKERRA)
 	{
 		pos = saguarenPosizioa();
-		if ((pos.x > 0) && (pos.x < 70) && (pos.y > 0) && (pos.y < 70)) { pantailak = MENUA; }
+		if ((pos.x > 40) && (pos.x < 130) && (pos.y > 600) && (pos.y < 690)) { pantailak = MENUA; }
 		while (instrukziopantailak == GENERALA && a<7) {
 			if ((pos.x > botoia[a].x1) && (pos.x < botoia[a].x2) && (pos.y > botoia[a].y1) && (pos.y < botoia[a].y2)) { instrukziopantailak = a; }
 			a++;
@@ -140,6 +144,7 @@ void instrukziobakoitza(int jokoinstrukzioa, char* izena) {
 	if (instrukziopantailak == jokoinstrukzioa) {
 		pantailaGarbitu();
 		irudiakpantailaratu(0, 0, 0, izena);
+		irudiakpantailaratu(40, 600, 1, ".\\img\\gezia2.bmp");
 		pantailaBerriztu();
 		while (pantailak == NOLAJOKATU && instrukziopantailak == jokoinstrukzioa) {
 			generaleraitzuli();
@@ -147,6 +152,7 @@ void instrukziobakoitza(int jokoinstrukzioa, char* izena) {
 		}
 		pantailaGarbitu();
 		irudiakpantailaratu(0, 0, 0, ".\\img\\azalpenak nagusia.bmp");
+		irudiakpantailaratu(40, 600, 1, ".\\img\\gezia2.bmp");
 		pantailaBerriztu();
 
 	}
@@ -156,7 +162,7 @@ void generaleraitzuli(void) {
 	if (ebentu == SAGU_BOTOIA_EZKERRA)
 	{
 		pos = saguarenPosizioa();
-		if ((pos.x > 0) && (pos.x < 70) && (pos.y > 0) && (pos.y < 70)) { instrukziopantailak = GENERALA; }
+		if ((pos.x > 40) && (pos.x < 130) && (pos.y > 600) && (pos.y < 690)) { instrukziopantailak = GENERALA; }
 	}
 }
 void menuraitzuli(void) {
@@ -166,7 +172,7 @@ void menuraitzuli(void) {
 	if (ebentu == SAGU_BOTOIA_EZKERRA)
 	{
 		pos = saguarenPosizioa();
-		if ((pos.x > 0) && (pos.x < 70) && (pos.y > 0) && (pos.y < 70)) { pantailak = MENUA; }
+		if ((pos.x > 40) && (pos.x < 130) && (pos.y > 600) && (pos.y < 690)) { pantailak = MENUA; }
 	}
 }
 

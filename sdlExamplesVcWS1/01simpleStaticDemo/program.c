@@ -28,24 +28,27 @@ void txapapantaila(char* txapa) {
     pantailaGarbitu();
 	letratamaina(20);
 	irudiakpantailaratu(0, 0, 0, ".\\img\\program.bmp");
+	irudiakpantailaratu(920, 580, 1, ".\\img\\gezia1.bmp");
     parrafoaidatzi(310, 10, 80, txapa,0X00, 0X00, 0X00);
 	letratamaina(30);
     pantailaBerriztu();
-    ezkerbotoibukle();
+	fletxabuklehurrengoa();
 }
 void zuzenoker(int zuzena) {
     pantailaGarbitu();
     
     if (zuzena == 1) {
 		irudiakpantailaratu(0, 0, 0, ".\\img\\program ona.bmp");
+		irudiakpantailaratu(920, 580, 1, ".\\img\\gezia1.bmp");
 
     }
     else {
 		irudiakpantailaratu(0, 0, 0, ".\\img\\program txarra.bmp");
+		irudiakpantailaratu(920, 580, 1, ".\\img\\gezia1.bmp");
     }
     
     pantailaBerriztu();
-    //ezkerbotoibukle();
+	fletxabuklehurrengoa();
 
 }
 int program(void) {
@@ -54,7 +57,7 @@ int program(void) {
 
     txapapantaila(TXAPA3);
     erantzuna = aukerak(AUKERA11, AUKERA12, AUKERA13);
-    if (erantzuna == 1) {
+    if (erantzuna == 2) {
         zuzenaalda = 1;
         puntuazioa++;
     }
@@ -62,7 +65,7 @@ int program(void) {
     zuzenaalda = 0;
     txapapantaila(TXAPA2);
     erantzuna = aukerak(AUKERA21, AUKERA22, AUKERA23);
-    if (erantzuna == 1) {
+    if (erantzuna == 3) {
         zuzenaalda = 1;
         puntuazioa++;
     }
@@ -85,14 +88,16 @@ int aukerak(char* aukera1, char* aukera2, char* aukera3) {
 	markodatuak();
     pantailaGarbitu();
 	irudiakpantailaratu(0, 0, 0, ".\\img\\programaukerak.bmp");
+	irudiakpantailaratu(920, 580, 1, ".\\img\\gezia1.bmp");
     letratamaina(25);
-    laukizuzenamarraztu(900, 650, 1000, 700, 0XF0, 0XF0, 0X00);
+    
     markoamarraztu(marko[0].x1, marko[0].y1, marko[0].x2, marko[0].y2, 5, 0XF0, 0XF0, 0X00);
     textuaIdatzi(marko[0].x1+10, marko[0].y1+30, aukera1, 0X00, 0X00, 0X00);
 	markoamarraztu(marko[1].x1, marko[1].y1, marko[1].x2, marko[1].y2, 5, 0XF0, 0XF0, 0X00);
     textuaIdatzi(marko[1].x1 + 10, marko[1].y1 + 30, aukera2, 0X00, 0X00, 0X00);
 	markoamarraztu(marko[2].x1, marko[2].y1, marko[2].x2, marko[2].y2, 5, 0XF0, 0XF0, 0X00);
     textuaIdatzi(marko[2].x1 + 10, marko[2].y1 + 30, aukera3, 0X00, 0X00, 0X00);
+	letratamaina(30);
     pantailaBerriztu();
 
     while (pantailak == JOKOA) {
@@ -113,7 +118,7 @@ int aukerak(char* aukera1, char* aukera2, char* aukera3) {
                 aukeratu(3);
                 aukeratualdu = 3;
             }
-            if ((pos.x > 900) && (pos.x < 1000) && (pos.y > 650) && (pos.y < 700) && (aukeratualdu != 0)) {
+            if ((pos.x > 950) && (pos.x < 1040) && (pos.y > 610) && (pos.y < 700) && (aukeratualdu != 0)) {
                 pantailaGarbitu();
                 pantailaBerriztu();
                 return aukeratualdu;

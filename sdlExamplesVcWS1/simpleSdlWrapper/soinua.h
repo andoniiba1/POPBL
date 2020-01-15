@@ -1,7 +1,7 @@
 #ifndef SOINUA_H
 #define SOINUA_H
 
-#define MAX_SOUNDS 10
+#define MAX_SOUNDS 11
 
 #include <SDL_mixer.h>
 

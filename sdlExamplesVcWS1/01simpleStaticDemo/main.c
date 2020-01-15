@@ -35,7 +35,7 @@
 
 int jokoa(void);
 
-
+void egunpantaila(int eguna);
 
 
 
@@ -66,8 +66,9 @@ int main(int argc, char* str[])
                 if (ebentu == SAGU_BOTOIA_EZKERRA)
 
                 {
+
                     pos = saguarenPosizioa();
-                    if ((pos.x > 500) && (pos.x < 500 + 70) && (pos.y > 130) && (pos.y < 130 + 70)) { pantailak = JOKOA;  }
+					if ((pos.x > 500) && (pos.x < 500 + 70) && (pos.y > 130) && (pos.y < 130 + 70)) {  pantailak = JOKOA; }
 
                     if ((pos.x > 500) && (pos.x < 500 + 70) && (pos.y > 220) && (pos.y < 220 + 70)) { pantailak = NOLAJOKATU; }
                     if ((pos.x > 500) && (pos.x < 500 + 70) && (pos.y > 310) && (pos.y < 310 + 70)) { pantailak = KREDITUAK; }
@@ -77,7 +78,7 @@ int main(int argc, char* str[])
 
             }
             toggleMusic();
-            
+			soinua(".\\sound\\botoia.wav", 4);
         }
 
 
@@ -109,13 +110,16 @@ int main(int argc, char* str[])
 int jokoa(void)
 {
     int puntuazioiratzarri,puntuazioplataforma,puntuazioklase,eguna=0,egunekopuntuak=0,astekopuntuak=0;
-    
+	historia(AZALPENGENERALA);
     while (pantailak == JOKOA) {
-		puntuazioiratzarri = redes();
-		/*eguna++;
+		//puntuazioiratzarri = oinarri();
 		puntuazioiratzarri = 0;
 		puntuazioplataforma = 0;
 		puntuazioklase = 0;
+	
+		eguna++;
+		egunpantaila(eguna);
+		
 		puntuazioiratzarri=iratzarri();
 		puntuaziotestua(puntuazioiratzarri, ESNATUONA, ESNATUBERANDU, ESNATUOSOBERANDU, EZESNATU);
 		if (puntuazioiratzarri != 0 && pantailak==JOKOA) {
@@ -126,6 +130,10 @@ int jokoa(void)
 			switch (eguna)
 			{
 			case 1:
+				historia(PROGRAMAZALPENA);
+				puntuazioklase = program();
+				puntuaziotestua(puntuazioklase, PROGRAMONDO, PROGRAMTARTE, PROGRAMGAIZKI, PROGRAMOSOGAIZKI);
+				break;
 				historia(MATEAZALPENA);
 				puntuazioklase = matematika();
 				puntuaziotestua(puntuazioklase, MATEONDO, MATETARTE, MATEGAIZKI, MATEOSOGAIZKI);
@@ -141,10 +149,7 @@ int jokoa(void)
 				puntuaziotestua(puntuazioklase, REDESONDO, REDESTARTE, REDESGAIZKI, REDESOSOGAIZKI);
 				break;
 			case 4:
-				historia(PROGRAMAZALPENA);
-				puntuazioklase = program();
-				puntuaziotestua(puntuazioklase, PROGRAMONDO, PROGRAMTARTE, PROGRAMGAIZKI, PROGRAMOSOGAIZKI);
-				break;
+				
 			case 5:
 				historia(FISIKAAZALPENA);
 				puntuazioklase = fisika();
@@ -170,10 +175,52 @@ int jokoa(void)
 				}
 				if (pantailak == JOKOA) { pantailak = MENUA; }
 			}
-		}*/
+		}
        
 		
         
     }
     return 0;
+}
+void egunpantaila(int eguna)
+{
+	int bai = 0;
+	pantailaGarbitu();
+
+
+	irudiakpantailaratu(0, 0, 0, ".\\img\\EGIL.bmp");
+	irudiakpantailaratu(920, 580, 1, ".\\img\\gezia1.bmp");
+	letratamaina(100);
+
+	switch (eguna)
+	{
+
+	case 1:
+		textuaIdatzi(300, 50, "1.EGUNA", 0, 0, 0);
+		break;
+
+	case 2:
+		textuaIdatzi(300, 50, "2.EGUNA", 0, 0, 0);
+		break;
+
+	case 3:
+		textuaIdatzi(300, 50, "3.EGUNA", 0, 0, 0);
+		break;
+
+	case 4:
+		textuaIdatzi(300, 50, "4.EGUNA", 0, 0, 0);
+		break;
+
+	case 5:
+		textuaIdatzi(300, 50, "5.EGUNA", 0, 0, 0);
+		break;
+
+
+
+	}
+
+	letratamaina(30);
+	pantailaBerriztu();
+	fletxabuklehurrengoa();
+
 }

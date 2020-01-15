@@ -7,10 +7,10 @@
 #include "OurTypes.h"
 #include "musika.h"
 
-char* soundFiles[] = { ".\\sound\\128GBVHR_01.wav", ".\\sound\\128NIGHT_01.wav", ".\\sound\\bostezo.wav",
+char* soundFiles[] = { ".\\sound\\128GBVHR_01.wav", ".\\sound\\ondo.wav", ".\\sound\\bostezo.wav",
 					   ".\\sound\\mmm.wav",  ".\\sound\\botoia.wav", ".\\sound\\alarma.wav", ".\\sound\\jauzia.wav",
-					   ".\\sound\\korrika.wav", ".\\sound\\arrapatuta.wav", ".\\sound\\kotxea.wav", ".\\sound\\ondo.wav",
-					   ".\\sound\\gaizki.wav" };
+					   ".\\sound\\korrika.wav", ".\\sound\\arrapatuta.wav", ".\\sound\\kotxea.wav", ".\\sound\\gaizki.wav",
+						".\\sound\\128NIGHT_01.wav" };
 
 void musikahasi(char* izena) {
 	audioInit();
@@ -39,7 +39,7 @@ void soinuakkargatu(void) {
 		if ((soniduak[i] = loadSound(soundFiles[i])) == -1)
 		{
 			fprintf(stderr, "Unable to load sound %s\n", SDL_GetError());
-			return 0;
+			
 		}
 	}
 }
