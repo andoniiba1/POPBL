@@ -1,46 +1,12 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(452,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (01simpleStaticDemo.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  ebentoak.c
-  graphics.c
-  imagen.c
-  soinua.c
-  text.c
-  fisika.c
-C:\Users\andoi\Documents\Unibersidad\program\1.semestre\POPBL\sdlExamplesVcWS1\01simpleStaticDemo\fisika.c(119,7): warning C4013:  'itxi' sin definir; se supone que extern devuelve como resultado int
-C:\Users\andoi\Documents\Unibersidad\program\1.semestre\POPBL\sdlExamplesVcWS1\01simpleStaticDemo\fisika.c(120,15): warning C4013:  'chocacon' sin definir; se supone que extern devuelve como resultado int
   hasierako pantailak.c
-  iratzarri.c
-  irudiformak.c
   main.c
-C:\Users\andoi\Documents\Unibersidad\program\1.semestre\POPBL\sdlExamplesVcWS1\01simpleStaticDemo\fisika.c(11,6): warning C4101:  'puntuazioa': variable local sin referencia
-  matematika.c
-C:\Users\andoi\Documents\Unibersidad\program\1.semestre\POPBL\sdlExamplesVcWS1\01simpleStaticDemo\main.c(114,9): warning C4101:  'puntuazioiratzarri': variable local sin referencia
-C:\Users\andoi\Documents\Unibersidad\program\1.semestre\POPBL\sdlExamplesVcWS1\01simpleStaticDemo\matematika.c(25,7): warning C4013:  'srand' sin definir; se supone que extern devuelve como resultado int
-C:\Users\andoi\Documents\Unibersidad\program\1.semestre\POPBL\sdlExamplesVcWS1\01simpleStaticDemo\matematika.c(25,12): warning C4013:  'time' sin definir; se supone que extern devuelve como resultado int
-C:\Users\andoi\Documents\Unibersidad\program\1.semestre\POPBL\sdlExamplesVcWS1\01simpleStaticDemo\matematika.c(37,7): warning C4013:  'itxi' sin definir; se supone que extern devuelve como resultado int
-  musika.c
-C:\Users\andoi\Documents\Unibersidad\program\1.semestre\POPBL\sdlExamplesVcWS1\01simpleStaticDemo\matematika.c(56,23): warning C4013:  'rand' sin definir; se supone que extern devuelve como resultado int
-  oinarri.c
-C:\Users\andoi\Documents\Unibersidad\program\1.semestre\POPBL\sdlExamplesVcWS1\01simpleStaticDemo\musika.c(42,12): warning C4098:  'soinuakkargatu': función 'void' que devuelve un valor
-C:\Users\andoi\Documents\Unibersidad\program\1.semestre\POPBL\sdlExamplesVcWS1\01simpleStaticDemo\oinarri.c(12,7): warning C4013:  'srand' sin definir; se supone que extern devuelve como resultado int
-C:\Users\andoi\Documents\Unibersidad\program\1.semestre\POPBL\sdlExamplesVcWS1\01simpleStaticDemo\oinarri.c(12,12): warning C4013:  'time' sin definir; se supone que extern devuelve como resultado int
-C:\Users\andoi\Documents\Unibersidad\program\1.semestre\POPBL\sdlExamplesVcWS1\01simpleStaticDemo\oinarri.c(14,11): warning C4013:  'rand' sin definir; se supone que extern devuelve como resultado int
-C:\Users\andoi\Documents\Unibersidad\program\1.semestre\POPBL\sdlExamplesVcWS1\01simpleStaticDemo\oinarri.c(64,24): warning C4013:  'mugimenduhorizontala' sin definir; se supone que extern devuelve como resultado int
-C:\Users\andoi\Documents\Unibersidad\program\1.semestre\POPBL\sdlExamplesVcWS1\01simpleStaticDemo\oinarri.c(66,20): warning C4013:  'animaziofuntzioa' sin definir; se supone que extern devuelve como resultado int
-C:\Users\andoi\Documents\Unibersidad\program\1.semestre\POPBL\sdlExamplesVcWS1\01simpleStaticDemo\oinarri.c(68,23): warning C4013:  'posizioaaktualizatu' sin definir; se supone que extern devuelve como resultado int
-C:\Users\andoi\Documents\Unibersidad\program\1.semestre\POPBL\sdlExamplesVcWS1\01simpleStaticDemo\oinarri.c(71,8): warning C4013:  'itxi' sin definir; se supone que extern devuelve como resultado int
-  plataformak.c
-C:\Users\andoi\Documents\Unibersidad\program\1.semestre\POPBL\sdlExamplesVcWS1\01simpleStaticDemo\oinarri.c(73,16): warning C4013:  'chocacon' sin definir; se supone que extern devuelve como resultado int
-C:\Users\andoi\Documents\Unibersidad\program\1.semestre\POPBL\sdlExamplesVcWS1\01simpleStaticDemo\plataformak.c(48,37): warning C4244:  '=': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\andoi\Documents\Unibersidad\program\1.semestre\POPBL\sdlExamplesVcWS1\01simpleStaticDemo\plataformak.c(49,20): warning C4244:  '=': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\andoi\Documents\Unibersidad\program\1.semestre\POPBL\sdlExamplesVcWS1\01simpleStaticDemo\plataformak.c(52,15): warning C4244:  '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\andoi\Documents\Unibersidad\program\1.semestre\POPBL\sdlExamplesVcWS1\01simpleStaticDemo\plataformak.c(62,40): warning C4133:  'función': tipos incompatibles, de 'float *' a 'int *'
+C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\main.c(96,17): warning C4013:  'menuraitzuli' sin definir; se supone que extern devuelve como resultado int
+C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\main.c(114,29): warning C4013:  'redes' sin definir; se supone que extern devuelve como resultado int
+C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\main.c(111,28): warning C4101:  'puntuazioplataforma': variable local sin referencia
   program.c
-  redes.c
-  testua.c
   Generando código...
-C:\Users\andoi\Documents\Unibersidad\program\1.semestre\POPBL\sdlExamplesVcWS1\01simpleStaticDemo\plataformak.c(74,7): warning C4013:  'itxi' sin definir; se supone que extern devuelve como resultado int
-C:\Users\andoi\Documents\Unibersidad\program\1.semestre\POPBL\sdlExamplesVcWS1\01simpleStaticDemo\redes.c(38): warning C4715:  'redes': no todas las rutas de acceso de control devuelven un valor
-C:\Users\andoi\Documents\Unibersidad\program\1.semestre\POPBL\sdlExamplesVcWS1\01simpleStaticDemo\program.c(126): warning C4715:  'aukerak': no todas las rutas de acceso de control devuelven un valor
-C:\Users\andoi\Documents\Unibersidad\program\1.semestre\POPBL\sdlExamplesVcWS1\01simpleStaticDemo\main.c(106): warning C4715:  'SDL_main': no todas las rutas de acceso de control devuelven un valor
-C:\Users\andoi\Documents\Unibersidad\program\1.semestre\POPBL\sdlExamplesVcWS1\01simpleStaticDemo\fisika.c(154): warning C4716:  'fisika': debe devolver un valor
-  01simpleStaticDemo.vcxproj -> C:\Users\andoi\Documents\Unibersidad\program\1.semestre\POPBL\sdlExamplesVcWS1\Debug\STUDENTS LIFE.exe
+C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\main.c(111,48): warning C4101:  'puntuazioklase': variable local sin referencia
+C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\program.c(126): warning C4715:  'aukerak': no todas las rutas de acceso de control devuelven un valor
+C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\main.c(103): warning C4715:  'SDL_main': no todas las rutas de acceso de control devuelven un valor
+  01simpleStaticDemo.vcxproj -> C:\Users\andoi\Desktop\sdlExamplesVcWS1\Debug\STUDENTS LIFE.exe

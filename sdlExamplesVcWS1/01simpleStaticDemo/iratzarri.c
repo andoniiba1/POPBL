@@ -27,7 +27,7 @@ int iratzarri(void) {
 		musikahasi(".\\sound\\alarma.wav");
 		soinua(".\\sound\\bostezo.wav", 3);
 		errepikatu = 0;
-		while (aldia < 35 && errepikatu==0)
+		while (aldia < 35 && errepikatu==0 && pantailak == JOKOA)
 		{
 
 			irudiaMugitu(imagenak[0].id, x, y);
@@ -72,7 +72,7 @@ int iratzarri(void) {
 		}
 	}
 	audioTerminate();
-	return irudia;
+	return 3-irudia;
 }
 
 void erreseteatu(int* aldia, int* lehena, int* geio, int* bigarrena, int* segunduak, int* x, int* y) {

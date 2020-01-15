@@ -8,7 +8,7 @@
 
 #include "fisika.h"
 int fisika(void) {
-	int puntuazioa, aldea = 0, fondoa=8, amaitu=0;
+	int puntuazioa=0, aldea = 0, fondoa=8, amaitu=0,txoke=0;
 
 	pantailaGarbitu();
 	imagenak[0].id = irudiaKargatu(".\\img\\aurrea.bmp");
@@ -33,6 +33,7 @@ int fisika(void) {
 	pantailaBerriztu();
 	bazterradatuak1();
 	while (pantailak == JOKOA && amaitu==0) {
+		puntuazioa++;
 		ebentu = ebentuaJasoGertatuBada();
 		if (ebentu == TECLA_RIGHT)
 		{
@@ -49,32 +50,32 @@ int fisika(void) {
 			switch (aldea)
 			{
 			case 0:
-				kotxepos.y = kotxepos.y - 5;
+				kotxepos.y = kotxepos.y - 10;
 				break;
 			case 1:
-				kotxepos.x = kotxepos.x + 3;
-				kotxepos.y = kotxepos.y - 3;
+				kotxepos.x = kotxepos.x + 6;
+				kotxepos.y = kotxepos.y - 6;
 				break;
 			case 2:
-				kotxepos.x = kotxepos.x + 5;
+				kotxepos.x = kotxepos.x + 10;
 				break;
 			case 3:
-				kotxepos.x = kotxepos.x + 3;
-				kotxepos.y = kotxepos.y + 3;
+				kotxepos.x = kotxepos.x + 6;
+				kotxepos.y = kotxepos.y + 6;
 				break;
 			case 4:
-				kotxepos.y = kotxepos.y + 5;
+				kotxepos.y = kotxepos.y + 10;
 				break;
 			case 5:
-				kotxepos.x = kotxepos.x - 3;
-				kotxepos.y = kotxepos.y + 3;
+				kotxepos.x = kotxepos.x - 6;
+				kotxepos.y = kotxepos.y + 6;
 				break;
 			case 6:
-				kotxepos.x = kotxepos.x - 5;
+				kotxepos.x = kotxepos.x - 10;
 				break;
 			case 7:
-				kotxepos.x = kotxepos.x - 3;
-				kotxepos.y = kotxepos.y - 3;
+				kotxepos.x = kotxepos.x - 6;
+				kotxepos.y = kotxepos.y - 6;
 				break;
 			default:
 				break;
@@ -85,32 +86,32 @@ int fisika(void) {
 			switch (aldea)
 			{
 			case 0:
-				kotxepos.y = kotxepos.y + 5;
+				kotxepos.y = kotxepos.y + 10;
 				break;
 			case 1:
-				kotxepos.x = kotxepos.x - 3;
-				kotxepos.y = kotxepos.y + 3;
+				kotxepos.x = kotxepos.x - 6;
+				kotxepos.y = kotxepos.y + 6;
 				break;
 			case 2:
-				kotxepos.x = kotxepos.x - 5;
+				kotxepos.x = kotxepos.x - 10;
 				break;
 			case 3:
-				kotxepos.x = kotxepos.x - 3;
-				kotxepos.y = kotxepos.y - 3;
+				kotxepos.x = kotxepos.x - 6;
+				kotxepos.y = kotxepos.y - 6;
 				break;
 			case 4:
-				kotxepos.y = kotxepos.y - 5;
+				kotxepos.y = kotxepos.y - 10;
 				break;
 			case 5:
-				kotxepos.x = kotxepos.x + 3;
-				kotxepos.y = kotxepos.y - 3;
+				kotxepos.x = kotxepos.x + 6;
+				kotxepos.y = kotxepos.y - 6;
 				break;
 			case 6:
-				kotxepos.x = kotxepos.x + 5;
+				kotxepos.x = kotxepos.x + 10;
 				break;
 			case 7:
-				kotxepos.x = kotxepos.x + 3;
-				kotxepos.y = kotxepos.y + 3;
+				kotxepos.x = kotxepos.x + 6;
+				kotxepos.y = kotxepos.y + 6;
 				break;
 			default:
 				break;
@@ -147,10 +148,19 @@ int fisika(void) {
 		}
 		
 		if (bazterratxokea(kotxepos.x+zentroa.x, kotxepos.y+zentroa.y, 50, 50,fondoa) != 1) {
+			txoke=1;
 			amaitu = 1;
 		}
 		kotxeamarraztu(aldea,fondoa);
 	}
+	if (puntuazioa <= 40000)puntuazioa = 3;
+	else {
+		if (puntuazioa > 40000 && puntuazioa<=53000)puntuazioa = 2;
+		else puntuazioa = 1;
+	}
+	if (txoke == 1)puntuazioa = 0;
+	return puntuazioa;
+	
 }
 void kotxeamarraztu(int aldea,int fondoa) {
 	irudiaMugitu(imagenak[aldea].id, kotxepos.x-zentroa.x, kotxepos.y-zentroa.y);
@@ -170,68 +180,68 @@ int bazterratxokea(int x, int y, int widht, int height, int fondoa) {
 }
 void bazterradatuak1() {
 
-	bidea[0].x = 43;
-	bidea[0].y = 419;
-	bidea[0].width = 143;
-	bidea[0].height = 303;
-	bidea[1].x = 43;
-	bidea[1].y = 419;
-	bidea[1].width = 1007;
-	bidea[1].height = 135;
-	bidea[2].x = 890;
-	bidea[2].y = 43;
-	bidea[2].width = 169;
-	bidea[2].height = 507;
+	bidea[0].x = 123;
+	bidea[0].y = 469;
+	bidea[0].width = 60;
+	bidea[0].height = 253;
+	bidea[1].x = 143;
+	bidea[1].y = 469;
+	bidea[1].width = 957;
+	bidea[1].height = 85;
+	bidea[2].x = 940;
+	bidea[2].y = 93;
+	bidea[2].width = 99;
+	bidea[2].height = 457;
 	bidea[3].x = 0;
-	bidea[3].y = 43;
-	bidea[3].width = 1055;
-	bidea[3].height = 150;
+	bidea[3].y = 93;
+	bidea[3].width = 1000;
+	bidea[3].height = 100;
 }
 void bazterradatuak2(void) {
-	bidea[0].x = 655;
-	bidea[0].y = 45;
-	bidea[0].width = 445;
-	bidea[0].height = 125;
-	bidea[1].x = 655;
+	bidea[0].x = 700;
+	bidea[0].y = 80;
+	bidea[0].width = 545;
+	bidea[0].height = 120;
+	bidea[1].x = 720;
 	bidea[1].y = 45;
-	bidea[1].width = 165;
-	bidea[1].height = 425;
-	bidea[2].x = 20;
-	bidea[2].y = 325;
-	bidea[2].width = 790;
-	bidea[2].height = 150;
-	bidea[3].x = 20;
-	bidea[3].y = 325;
-	bidea[3].width = 158;
-	bidea[3].height = 393;
-	bidea[4].x = 20;
-	bidea[4].y = 587;
-	bidea[4].width = 854;
+	bidea[1].width = 80;
+	bidea[1].height = 345;
+	bidea[2].x = 75;
+	bidea[2].y = 380;
+	bidea[2].width = 730;
+	bidea[2].height = 100;
+	bidea[3].x = 85;
+	bidea[3].y = 380;
+	bidea[3].width = 90;
+	bidea[3].height = 338;
+	bidea[4].x = 85;
+	bidea[4].y = 610;
+	bidea[4].width = 824;
 	bidea[4].height = 135;
 }
 void bazterradatuak3(void) {
-	bidea[0].x = 692;
-	bidea[0].y = -50;
-	bidea[0].width = 122;
-	bidea[0].height = 294;
+	bidea[0].x = 710;
+	bidea[0].y = 0;
+	bidea[0].width = 90;
+	bidea[0].height = 280;
 	bidea[1].x = 80;
-	bidea[1].y = 165;
+	bidea[1].y = 200;
 	bidea[1].width = 734;
-	bidea[1].height = 131;
-	bidea[2].x = 80;
-	bidea[2].y = 165;
-	bidea[2].width = 168;
-	bidea[2].height = 466;
+	bidea[1].height = 100;
+	bidea[2].x = 130;
+	bidea[2].y = 200;
+	bidea[2].width = 108;
+	bidea[2].height = 431;
 	bidea[3].x = 77;
-	bidea[3].y = 496;
+	bidea[3].y = 530;
 	bidea[3].width = 975;
 	bidea[3].height = 132;
-	bidea[4].x = 891;
-	bidea[4].y = 115;
-	bidea[4].width = 161;
-	bidea[4].height = 513;
-	bidea[5].x = 891;
-	bidea[5].y = 115;
+	bidea[4].x = 930;
+	bidea[4].y = 165;
+	bidea[4].width = 100;
+	bidea[4].height = 475;
+	bidea[5].x = 930;
+	bidea[5].y = 165;
 	bidea[5].width = 191;
-	bidea[5].height = 135;
+	bidea[5].height = 95;
 }

@@ -5,7 +5,8 @@
 #define SOINUKOP 10
 
 
-typedef enum { IRTEN, MENUA, JOKOA, INSTRUKZIOAK, KREDITUAK } PANTAILAK;
+typedef enum { IRTEN, MENUA, JOKOA, NOLAJOKATU, KREDITUAK } PANTAILAK;
+typedef enum { ESNATU, PLATABIDEA, MATE, OINARRI, REDES, PROGRAM, FISIKA,GENERALA } INSTRUKZIOPANTAILAK;
 typedef struct S_IRUDIAK 
 {
     int x;
@@ -23,10 +24,10 @@ typedef struct S_KONSEJOAK
 }KONSEJOAK;
 typedef struct S_PLATAFORMAK
 {
-    int x;
-    int y;
-    int width;
-    int height;
+	int x;
+	int y;
+	int width;
+	int height;
 }PLATAFORMAK;
 typedef struct ANIMAZIO
 {
@@ -34,7 +35,14 @@ typedef struct ANIMAZIO
     int eskuin;
     
 }ANIMAZIO;
+typedef struct MARKO
+{
+	int x1;
+	int y1;
+	int x2;
+	int y2;
 
+}MARKO;
 IRUDIAK imagenak[32];
 PANTAILAK pantailak;
 POSIZIOA pos;

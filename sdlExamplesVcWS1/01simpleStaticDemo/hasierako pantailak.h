@@ -11,6 +11,8 @@
 #include "irudiformak.h"
 #include "musika.h"
 
+MARKO botoia[7];
+INSTRUKZIOPANTAILAK instrukziopantailak;
 
 void menua(void);
 void kredituak(void);
@@ -19,4 +21,9 @@ void ezkerbotoibukle(void);
 void historia(char* historia);
 void puntuazioa(int puntu);
 void itxi(void);
+void puntuaziotestua(int puntuak, char* bikain, char* ondo, char* gaizki, char* desastre);
+void botoipantailak(void);
+void generaleraitzuli(void);
+void instrukziobakoitza(int jokoinstrukzioa, char* izena);
+void botoidatuak(void);
 #endif

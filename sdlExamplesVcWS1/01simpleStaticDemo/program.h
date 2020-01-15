@@ -12,14 +12,14 @@
 #include"hasierako pantailak.h"
 #include "musika.h"
 
-
+MARKO marko[4];
 
 int program(void);
 void aukeratu(int aukera);
 int aukerak(char* aukera1, char* aukera2, char* aukera3);
 void zuzenoker(int zuzena);
 void txapapantaila(char* txapa);
-
+void markodatuak(void);
 
 
 #endif

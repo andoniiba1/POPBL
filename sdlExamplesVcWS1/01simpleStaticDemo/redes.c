@@ -103,13 +103,13 @@ int enkajatu(int irudizenbakia, int x, int y) {
 }
 int redespuntuazioa(void) {
     int kont = 0;
-    if (imagenak[0].x == 875 && imagenak[0].y == 75) {
+    if (imagenak[2].x == 875 && imagenak[2].y == 75) {
         kont++;
     }
     if (imagenak[1].x == 875 && imagenak[1].y == 275) {
         kont++;
     }
-    if (imagenak[2].x == 875 && imagenak[2].y == 475) {
+    if (imagenak[0].x == 875 && imagenak[0].y == 475) {
         kont++;
     }
     return kont;

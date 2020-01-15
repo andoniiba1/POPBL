@@ -103,21 +103,21 @@ int plataformak(void) {
 }
 
 void plataformdatuak(void) {
-	plataform[0].x = 170;
+	plataform[0].x = 175;
 	plataform[0].y = 490;
-	plataform[0].width = 120;
+	plataform[0].width = 115;
 	plataform[0].height = 30;
 	plataform[1].x = 40;
 	plataform[1].y = 384;
-	plataform[1].width = 125;
+	plataform[1].width = 115;
 	plataform[1].height = 21;
-	plataform[2].x = 150;
+	plataform[2].x = 155;
 	plataform[2].y = 265;
-	plataform[2].width = 130;
+	plataform[2].width = 125;
 	plataform[2].height = 30;
-	plataform[3].x = 340;
+	plataform[3].x = 345;
 	plataform[3].y = 265;
-	plataform[3].width = 240;
+	plataform[3].width = 235;
 	plataform[3].height = 400;
 	plataform[4].x = 255;
 	plataform[4].y = 210;
@@ -127,17 +127,17 @@ void plataformdatuak(void) {
 	plataform[5].y = 591;
 	plataform[5].width = 330;
 	plataform[5].height = 129;
-	plataform[6].x = 330;
+	plataform[6].x = 325;
 	plataform[6].y = 165;
 	plataform[6].width = 37;
 	plataform[6].height = 40;
-	plataform[7].x = 368;
+	plataform[7].x = 365;
 	plataform[7].y = 140;
-	plataform[7].width = 130;
+	plataform[7].width = 127;
 	plataform[7].height = 64;
-	plataform[8].x = 449;
+	plataform[8].x = 446;
 	plataform[8].y = 88;
-	plataform[8].width = 51;
+	plataform[8].width = 48;
 	plataform[8].height = 54;
 	plataform[9].x = 725;
 	plataform[9].y = 245;
@@ -151,9 +151,9 @@ void plataformdatuak(void) {
 	plataform[11].y = 578;
 	plataform[11].width = 305;
 	plataform[11].height = 242;
-	plataform[12].x = -1;
+	plataform[12].x = -20;
 	plataform[12].y = 0;
-	plataform[12].width = 1;
+	plataform[12].width = 10;
 	plataform[12].height = 720;
 
 }
