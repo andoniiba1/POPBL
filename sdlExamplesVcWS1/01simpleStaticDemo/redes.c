@@ -16,6 +16,7 @@ int redes(void) {
     irudiakpantailaratu(50, 300, 1, ".\\img\\b.bmp");
     irudiakpantailaratu(50, 500, 2, ".\\img\\c.bmp");
     irudiakpantailaratu(175, 125, 3, ".\\img\\redesjokoa.bmp");
+	irudiakpantailaratu(920, 620, 4, ".\\img\\gezia1.bmp");
 
     pantailaBerriztu();
 
@@ -26,13 +27,12 @@ int redes(void) {
         irudimugimendua(0);
         irudimugimendua(1);
         irudimugimendua(2);
-        if (ebentu == SAGU_BOTOIA_EZKERRA && pos.x > 900 && pos.x < 1000 && pos.y>650 && pos.y < 700) {
+        if (ebentu == SAGU_BOTOIA_EZKERRA && (pos.x > 920) && (pos.x < 1010) && (pos.y > 620) && (pos.y < 710)) {
             puntuazioa = redespuntuazioa();
             return puntuazioa;
         }
 
-        if (ebentu == TECLA_ESCAPE) { pantailak = IRTEN; }
-        if (ebentu == GERTAERA_IRTEN) { pantailak = IRTEN; }
+		itxi();
 
     }
 }
@@ -70,15 +70,16 @@ void irudimugimendua(int irudizenbakia) {
 void redesmarkoak(void) {
 
 
-    laukizuzenamarraztu(0, 0, 1080, 720, 0XFF, 0XFF, 0XFF);
+	laukizuzenamarraztu(0, 0, 1080, 720, 0XFF, 0XFF, 0XFF);
     markoamarraztu(850, 50, 1000, 200, 5, 0X00, 0X00, 0X00);
     markoamarraztu(850, 250, 1000, 400, 5, 0X00, 0X00, 0X00);
     markoamarraztu(850, 450, 1000, 600, 5, 0X00, 0X00, 0X00);
-    laukizuzenamarraztu(900, 650, 1000, 700, 0X00, 0X00, 0X00);
+    
 }
 void besteirudiakmantendu(int irudizenbakia) {
 
     irudibatMarraztu(imagenak[3].id);
+	irudibatMarraztu(imagenak[4].id);
     if (irudizenbakia == 0) { irudibatMarraztu(imagenak[1].id); irudibatMarraztu(imagenak[2].id); }
     if (irudizenbakia == 1) { irudibatMarraztu(imagenak[0].id); irudibatMarraztu(imagenak[2].id); }
     if (irudizenbakia == 2) { irudibatMarraztu(imagenak[0].id); irudibatMarraztu(imagenak[1].id); }

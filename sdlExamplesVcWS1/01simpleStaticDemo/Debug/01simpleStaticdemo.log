@@ -1,36 +1,7 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(452,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (01simpleStaticDemo.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  fisika.c
-C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\fisika.c(129,7): warning C4013:  'itxi' sin definir; se supone que extern devuelve como resultado int
-  hasierako pantailak.c
-  iratzarri.c
-  main.c
-C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\fisika.c(130,15): warning C4013:  'chocacon' sin definir; se supone que extern devuelve como resultado int
-C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\main.c(97,17): warning C4013:  'menuraitzuli' sin definir; se supone que extern devuelve como resultado int
-C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\main.c(123,31): warning C4013:  'iratzarri' sin definir; se supone que extern devuelve como resultado int
   matematika.c
-C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\main.c(144,27): warning C4013:  'redes' sin definir; se supone que extern devuelve como resultado int
 C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\matematika.c(25,7): warning C4013:  'srand' sin definir; se supone que extern devuelve como resultado int
 C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\matematika.c(25,12): warning C4013:  'time' sin definir; se supone que extern devuelve como resultado int
 C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\matematika.c(37,7): warning C4013:  'itxi' sin definir; se supone que extern devuelve como resultado int
-  oinarri.c
 C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\matematika.c(56,24): warning C4013:  'rand' sin definir; se supone que extern devuelve como resultado int
-C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\oinarri.c(12,7): warning C4013:  'srand' sin definir; se supone que extern devuelve como resultado int
-C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\oinarri.c(12,12): warning C4013:  'time' sin definir; se supone que extern devuelve como resultado int
-C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\oinarri.c(14,11): warning C4013:  'rand' sin definir; se supone que extern devuelve como resultado int
-C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\oinarri.c(64,24): warning C4013:  'mugimenduhorizontala' sin definir; se supone que extern devuelve como resultado int
-C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\oinarri.c(66,20): warning C4013:  'animaziofuntzioa' sin definir; se supone que extern devuelve como resultado int
-C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\oinarri.c(68,23): warning C4013:  'posizioaaktualizatu' sin definir; se supone que extern devuelve como resultado int
-C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\oinarri.c(71,8): warning C4013:  'itxi' sin definir; se supone que extern devuelve como resultado int
-  plataformak.c
-C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\oinarri.c(73,16): warning C4013:  'chocacon' sin definir; se supone que extern devuelve como resultado int
-C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\plataformak.c(49,37): warning C4244:  '=': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\plataformak.c(50,20): warning C4244:  '=': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\plataformak.c(53,15): warning C4244:  '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\plataformak.c(63,40): warning C4133:  'función': tipos incompatibles, de 'float *' a 'int *'
-  program.c
-  testua.c
-  Generando código...
-C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\plataformak.c(75,7): warning C4013:  'itxi' sin definir; se supone que extern devuelve como resultado int
-C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\program.c(131): warning C4715:  'aukerak': no todas las rutas de acceso de control devuelven un valor
-C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\main.c(104): warning C4715:  'SDL_main': no todas las rutas de acceso de control devuelven un valor
   01simpleStaticDemo.vcxproj -> C:\Users\andoi\Desktop\sdlExamplesVcWS1\Debug\STUDENTS LIFE.exe

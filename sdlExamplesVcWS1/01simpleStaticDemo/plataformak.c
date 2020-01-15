@@ -140,9 +140,9 @@ void plataformdatuak(void) {
 	plataform[8].y = 88;
 	plataform[8].width = 48;
 	plataform[8].height = 54;
-	plataform[9].x = 725;
+	plataform[9].x = 730;
 	plataform[9].y = 245;
-	plataform[9].width = 130;
+	plataform[9].width = 125;
 	plataform[9].height = 30;
 	plataform[10].x = 630;
 	plataform[10].y = 400;

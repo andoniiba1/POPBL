@@ -87,8 +87,9 @@ int main(int argc, char* str[])
            
         }
         if (pantailak == NOLAJOKATU) {
-            instrukzioak();
-           
+			toggleMusic();
+			instrukzioak();
+			toggleMusic();
         }
         if (pantailak == KREDITUAK) {
             kredituak();
@@ -112,8 +113,8 @@ int jokoa(void)
     int puntuazioiratzarri,puntuazioplataforma,puntuazioklase,eguna=0,egunekopuntuak=0,astekopuntuak=0;
 	historia(AZALPENGENERALA);
     while (pantailak == JOKOA) {
-		//puntuazioiratzarri = oinarri();
-		puntuazioiratzarri = 0;
+		puntuazioiratzarri = matematika();
+		/*puntuazioiratzarri = 0;
 		puntuazioplataforma = 0;
 		puntuazioklase = 0;
 	
@@ -174,7 +175,7 @@ int jokoa(void)
 				}
 				if (pantailak == JOKOA) { pantailak = MENUA; }
 			}
-		}
+		}*/
        
 		
         

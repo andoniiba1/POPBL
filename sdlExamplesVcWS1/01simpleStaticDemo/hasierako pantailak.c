@@ -125,7 +125,7 @@ void botoipantailak(void) {
 	if (ebentu == SAGU_BOTOIA_EZKERRA)
 	{
 		pos = saguarenPosizioa();
-		if ((pos.x > 40) && (pos.x < 130) && (pos.y > 600) && (pos.y < 690)) { pantailak = MENUA; }
+		if ((pos.x > 40) && (pos.x < 130) && (pos.y > 600) && (pos.y < 690)) { pantailak = MENUA; soinua(".\\sound\\botoia.wav", 4);}
 		while (instrukziopantailak == GENERALA && a<7) {
 			if ((pos.x > botoia[a].x1) && (pos.x < botoia[a].x2) && (pos.y > botoia[a].y1) && (pos.y < botoia[a].y2)) { instrukziopantailak = a; }
 			a++;
@@ -162,7 +162,8 @@ void generaleraitzuli(void) {
 	if (ebentu == SAGU_BOTOIA_EZKERRA)
 	{
 		pos = saguarenPosizioa();
-		if ((pos.x > 40) && (pos.x < 130) && (pos.y > 600) && (pos.y < 690)) { instrukziopantailak = GENERALA; }
+		if ((pos.x > 40) && (pos.x < 130) && (pos.y > 600) && (pos.y < 690)) { instrukziopantailak = GENERALA; soinua(".\\sound\\botoia.wav", 4);
+		}
 	}
 }
 void menuraitzuli(void) {
@@ -172,7 +173,7 @@ void menuraitzuli(void) {
 	if (ebentu == SAGU_BOTOIA_EZKERRA)
 	{
 		pos = saguarenPosizioa();
-		if ((pos.x > 40) && (pos.x < 130) && (pos.y > 600) && (pos.y < 690)) { pantailak = MENUA; }
+		if ((pos.x > 40) && (pos.x < 130) && (pos.y > 600) && (pos.y < 690)) { pantailak = MENUA; soinua(".\\sound\\botoia.wav", 4);}
 	}
 }
 

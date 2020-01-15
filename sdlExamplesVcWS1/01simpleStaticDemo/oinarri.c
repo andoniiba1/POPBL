@@ -11,8 +11,14 @@ int oinarri(void) {
 	int puntuazioa = 0, irudizenbakia = 0, a = 0, kont = 0,inertzia=0,kont2=0,animazio=0,eskuina=0,ezker=0,Vx=0;
 	srand(time(NULL));
 	while (irudizenbakia < 3) {
-		if (rand() % 2) { konsejoa[irudizenbakia].id = irudiaKargatu(".\\img\\ONDO.bmp"); }
-		else { konsejoa[irudizenbakia].id = irudiaKargatu(".\\img\\GAIZKI.bmp"); }
+		if (rand() % 2) { 
+			konsejoa[irudizenbakia].id = irudiaKargatu(".\\img\\ONDO.bmp"); 
+			konsejoa[irudizenbakia].aprobatu = 1;
+		}
+		else { 
+			konsejoa[irudizenbakia].id = irudiaKargatu(".\\img\\GAIZKI.bmp"); 
+			konsejoa[irudizenbakia].aprobatu = 0;
+		}
 
 		irudizenbakia++;
 	}

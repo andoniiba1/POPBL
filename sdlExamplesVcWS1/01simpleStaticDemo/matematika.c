@@ -8,15 +8,15 @@
 
 #include "matematika.h"
 int matematika(void) {
-	int x = 0, y = 500, aldatu = 2, mantendu = 0, gora = 0, azelerazio = 0, rebote = 0, geldidenbora = 0, geldi = 0, puntuazioa = 0, egon=0;
+	int x = 0, y = 525, aldatu = 2, mantendu = 0, gora = 0, azelerazio = 0, rebote = 0, geldidenbora = 0, geldi = 0, puntuazioa = 0, egon=0;
 	int lehena = 0, geio = 0, bigarrena = 0, segunduak = 9, geio2 = 0;
 	char kronometroa[128];
 
 	pantailaGarbitu();
 
 
-	irudiakpantailaratu(0, 0, 0, ".\\img\\fondo.bmp");
-	irudiakpantailaratu(230, 500, 1, ".\\img\\irudi.bmp");
+	irudiakpantailaratu(0, 0, 0, ".\\img\\mate.bmp");
+	irudiakpantailaratu(315, 450, 1, ".\\img\\pelotita.bmp");
 	irudiakpantailaratu(x, y, 2, ".\\img\\irakaslea.bmp");
 	irudiakargaposizioan(x, y, 3, ".\\img\\irakaslea2.bmp");
 
@@ -93,12 +93,12 @@ int matematika(void) {
 
 int harrapatu(int x, int gora, int aldatu) {
 	int ikusi = 0;
-	if (gora == 1 && x > 0 && x < 230 && aldatu == 2)
+	if (gora == 1 && x > 0 && x < 310 && aldatu == 2)
 	{
 
 		ikusi = 1;
 	}
-	if (gora == 1 && x > 230 && x < 929 && aldatu == 3)
+	if (gora == 1 && x > 310 && x < 929 && aldatu == 3)
 	{
 
 		ikusi = 1;
