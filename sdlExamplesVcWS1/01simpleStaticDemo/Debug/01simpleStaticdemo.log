@@ -8,7 +8,7 @@ C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\fisika.c(130,15): war
 C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\main.c(97,17): warning C4013:  'menuraitzuli' sin definir; se supone que extern devuelve como resultado int
 C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\main.c(123,31): warning C4013:  'iratzarri' sin definir; se supone que extern devuelve como resultado int
   matematika.c
-C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\main.c(148,27): warning C4013:  'redes' sin definir; se supone que extern devuelve como resultado int
+C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\main.c(144,27): warning C4013:  'redes' sin definir; se supone que extern devuelve como resultado int
 C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\matematika.c(25,7): warning C4013:  'srand' sin definir; se supone que extern devuelve como resultado int
 C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\matematika.c(25,12): warning C4013:  'time' sin definir; se supone que extern devuelve como resultado int
 C:\Users\andoi\Desktop\sdlExamplesVcWS1\01simpleStaticDemo\matematika.c(37,7): warning C4013:  'itxi' sin definir; se supone que extern devuelve como resultado int

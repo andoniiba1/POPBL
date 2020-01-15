@@ -130,10 +130,6 @@ int jokoa(void)
 			switch (eguna)
 			{
 			case 1:
-				historia(PROGRAMAZALPENA);
-				puntuazioklase = program();
-				puntuaziotestua(puntuazioklase, PROGRAMONDO, PROGRAMTARTE, PROGRAMGAIZKI, PROGRAMOSOGAIZKI);
-				break;
 				historia(MATEAZALPENA);
 				puntuazioklase = matematika();
 				puntuaziotestua(puntuazioklase, MATEONDO, MATETARTE, MATEGAIZKI, MATEOSOGAIZKI);
@@ -149,7 +145,10 @@ int jokoa(void)
 				puntuaziotestua(puntuazioklase, REDESONDO, REDESTARTE, REDESGAIZKI, REDESOSOGAIZKI);
 				break;
 			case 4:
-				
+				historia(PROGRAMAZALPENA);
+				puntuazioklase = program();
+				puntuaziotestua(puntuazioklase, PROGRAMONDO, PROGRAMTARTE, PROGRAMGAIZKI, PROGRAMOSOGAIZKI);
+				break;
 			case 5:
 				historia(FISIKAAZALPENA);
 				puntuazioklase = fisika();
