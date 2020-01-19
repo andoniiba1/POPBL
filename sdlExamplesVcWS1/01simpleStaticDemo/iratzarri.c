@@ -17,27 +17,20 @@ int iratzarri(void) {
 
 
 	
-	irudiakargaposizioan(0, 0, 1, ".\\img\\fondoa1.bmp");
-	irudiakargaposizioan(0, 0, 2, ".\\img\\fondoa2.bmp");
-	irudiakargaposizioan(0, 0, 3, ".\\img\\fondoa3.bmp");
-	irudiakargaposizioan(x, y, 0, ".\\img\\arm2.bmp");
+	iratzarrikargatu();
 
 	while (irudia < 3 && errepikatu == 1 && pantailak == JOKOA)
 	{
-		soinuakkargatu();
-		musikahasi(".\\sound\\alarma.wav");
+		
 		soinua(".\\sound\\bostezo.wav", 2);
+		musikahasi(".\\sound\\alarma.wav");
+		
 		errepikatu = 0;
 		while (aldia < 35 && errepikatu==0 && pantailak == JOKOA)
 		{
 
 			irudiaMugitu(imagenak[0].id, x, y);
-			ebentu = ebentuaJasoGertatuBada2();
-			if (ebentu == TECLA_SPACE)
-			{
-				y = y + 2;
-				aldia++;
-			}
+			zuriunebarra(&y,&aldia);
 			itxi();
 
 			krono10(&lehena, &bigarrena, &geio, &segunduak, &aldia, &errepikatu);
@@ -118,14 +111,27 @@ void krono10(int* lehena, int* bigarrena, int* geio, int* segunduak, int* aldia,
 void etzaraesnatu(void)
 {
 	audioTerminate();
-	
+	soinuakkargatu();
 	pantailaGarbitu();
 	irudiakpantailaratu(0, 0, 4, ".\\img\\EGIL.bmp");
+	irudiakpantailaratu(920, 580, 5, ".\\img\\gezia1.bmp");
 	letratamaina(50);
 	textuaIdatzi(340, 300, "EZ ZARA ESNATU", 0X00, 0X00, 0X00);
 	letratamaina(30);
 	pantailaBerriztu();
-	ezkerbotoibukle();
-	
-	
+	fletxabuklehurrengoa();
+}
+void zuriunebarra(int *y, int *aldia) {
+	ebentu = ebentuaJasoGertatuBada2();
+	if (ebentu == TECLA_SPACE)
+	{
+		*y = *y + 2;
+		(*aldia)++;
+	}
+}
+void iratzarrikargatu(void) {
+	irudiakargaposizioan(0, 0, 1, ".\\img\\fondoa1.bmp");
+	irudiakargaposizioan(0, 0, 2, ".\\img\\fondoa2.bmp");
+	irudiakargaposizioan(0, 0, 3, ".\\img\\fondoa3.bmp");
+	irudiakargaposizioan(-150, 175, 0, ".\\img\\arm2.bmp");
 }

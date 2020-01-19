@@ -38,7 +38,7 @@ void soinuakkargatu(void) {
 	{
 		if ((soniduak[i] = loadSound(soundFiles[i])) == -1)
 		{
-			fprintf(stderr, "Unable to load sound %s\n", SDL_GetError());
+			
 			
 		}
 	}

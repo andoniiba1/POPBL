@@ -10,50 +10,31 @@
 
 int plataformak(void) {
 	
-	int animazio = 1, kont = 0, ezker = 0, Vy = 0, AzeY = 3, Vx = 0,  inertzia = 0,  eskuina = 1,salto=0,amaiera=0, hondoratu=0, aldaketa=0,puntuazioa=800,hil=0,soinudenbora=0;
+	int animazio = 1, geldi = 0, ezker = 0, Vy = 0, AzeY = 3, Vx = 0,  inertzia = 0,  eskuina = 1,salto=0,amaiera=0, hondoratu=0, aldaketa=0,puntuazioa=800,hil=0,soinudenbora=0;
 	float t = 0;
+
 	posberri.x = 5;
 	posberri.y = 525;
 
-
-	irudiakargaposizioan(0, 0, 0, ".\\img\\Plataformak.bmp");
-	irudiakargaposizioan(posberri.x, posberri.y, 1, ".\\img\\geldi.bmp");
-	irudiakargaposizioan(posberri.x, posberri.y, 2, ".\\img\\korrika1.bmp");
-	irudiakargaposizioan(posberri.x, posberri.y, 3, ".\\img\\korrika2.bmp");
-	irudiakargaposizioan(posberri.x, posberri.y, 4, ".\\img\\korrika3.bmp");
-	irudiakargaposizioan(posberri.x, posberri.y, 5, ".\\img\\geldiezker.bmp");
-	irudiakargaposizioan(posberri.x, posberri.y, 6, ".\\img\\korrika1ezker.bmp");
-	irudiakargaposizioan(posberri.x, posberri.y, 9, ".\\img\\korrika2ezker.bmp");
-	irudiakargaposizioan(posberri.x, posberri.y, 8, ".\\img\\korrika3ezker.bmp");
-
+	plataformakkargatu();
 	plataformdatuak();
+
 	while (pantailak == JOKOA && amaiera == 0 ) {
 
-
-
 		mugimenduhorizontala(&Vx, &inertzia, &eskuina);
-		soinudenbora--;
-		if (inertzia != 0 && soinudenbora<0 && salto==0 && posberri.y>130) {
-			soinua(".\\sound\\korrika.wav", 7);
-			soinudenbora = 20;
-		}
-		if (ebentu == TECLA_SPACE && salto == 0) {
-
-			Vy = -40;
-			salto = 1;
-			soinua(".\\sound\\jauzia.wav", 6);
-		}
+		ibiltzesoinua(&soinudenbora,inertzia,salto);
+		jauzia(&Vy,&salto);
 
 		
-		
-		if(hondoratu==0)Vy = Vy + AzeY * t;
-		aldaketa = Vy * t;
-		if (aldaketa > 25)aldaketa = 25;
+		//grabitatea(&hondoratu,&Vy,AzeY,&t,&aldaketa);
+		if (hondoratu == 0)Vy = Vy + (int)(AzeY * t);
+		aldaketa = (int)(Vy * t);
+		if (aldaketa > 25) { (aldaketa) = 25; }
 		posberri.y = posberri.y + aldaketa;
-		t = t + 0.05;
+		t = t + (float)0.05;
 	    
 		
-		animaziofuntzioa(&inertzia, &kont, &animazio, &eskuina, &ezker);
+		animaziofuntzioa(&inertzia, &geldi, &animazio, &eskuina, &ezker);
 		
 		if (plataformatxokea(posberri.x, posberri.y, 38, 60) != 1) {
 			posizioaaktualizatu();
@@ -70,36 +51,21 @@ int plataformak(void) {
 
 		irudibatMarraztu(imagenak[0].id);
 		irudibatMarraztu(imagenak[animazio].id);
+
 		pantailaBerriztu();
 
 		itxi();
 
-		if (inertzia < 0)inertzia++;
-		if (inertzia > 0)inertzia--;
-		if (inertzia == 0)Vx = 0;
+		inertziajaitsi(&inertzia,&Vx);
 
-		if (chocacon(imagenak[animazio].x, imagenak[animazio].y,40,60,574,601,200,118==1)) {
-			
-			hondoratu++;
-			Vy = 5;
-			t = 1;
-			hil = 1;
-			
-		    
-		}
-		if (chocacon(imagenak[animazio].x, imagenak[animazio].y, 40, 60, 574, 690, 200, 50 == 1) || chocacon(imagenak[animazio].x, imagenak[animazio].y, 40, 60, 1070, 550, 40, 80 == 1)) {
-			amaiera = 1;
-		}
+		ibaia(&animazio,&hondoratu,&t,&Vy,&hil);
+		
+		amaiera=plataformamaitu(animazio);
 
 		SDL_Delay(30);
 		puntuazioa--;
 	}
-	if (puntuazioa > 300)puntuazioa = 3;
-	else {
-		if (puntuazioa > 0)puntuazioa = 2;
-		else puntuazioa = 1;
-	}
-	if (hil == 1)puntuazioa = 0;
+	puntuazioa=plataformapuntuazioa(puntuazioa, hil);
 	return puntuazioa;
 }
 
@@ -167,11 +133,7 @@ int plataformatxokea(int x, int y, int widht, int height) {
 	return ukitzendu;
 }
 
-int chocacon(int x1, int y1, int widht1, int height1, int x2, int y2, int widht2, int height2) {
-	int ukitzendu = 0;
-	if ((x1<x2 + widht2 && x1 + widht1 > x2) && (y1<y2 + height2 && y1 + height1 > y2)) { ukitzendu = 1; }
-	return ukitzendu;
-}
+
 void posizioamantendu(void) {
 	int a;
 	for (a = 1; a < 10; a++) {
@@ -179,14 +141,8 @@ void posizioamantendu(void) {
 		posberri.y = imagenak[a].y;
 	}
 }
-void posizioaaktualizatu(void) {
-	int a;
-	for (a = 1; a < 10; a++) {
-		imagenak[a].x = posberri.x;
-		imagenak[a].y = posberri.y;
-	}
-}
-void erorketa(int *salto,int *t, int *aldaketa) {
+
+void erorketa(int *salto,float *t, int *aldaketa) {
 	int a;
 	if (plataformatxokea(posberri.x, posberri.y + *aldaketa, 38, 60) == 1) {
 		a = 1;
@@ -197,41 +153,65 @@ void erorketa(int *salto,int *t, int *aldaketa) {
 		*salto = 0;
 		*t = 0;
 	}
-
-
-
 }
-void animaziofuntzioa(int *inertzia,int *kont,int *animazio, int *eskuina, int *ezker) {
-	if (*animazio == 9)*animazio = 7;
-	if (*inertzia > 0) { (*animazio)++; *kont = 30; }
-	if (*animazio > 4 && *inertzia > 0)*animazio = 1;
-	if (*inertzia < 0) { 
-		(*ezker)++; 
-		*kont = 30; 
-		*animazio = *ezker + 4; 
-	}
-	if (*ezker > 4 && *inertzia < 0)*ezker = 1;
-
-
-	(*kont)--;
-	if (*kont < 0)
-	{
-		if (*eskuina == 1)*animazio = 1;
-		else *animazio = 5;
-	}
-	if (*animazio == 7)*animazio = 9;
+void plataformakkargatu(void) {
+	irudiakargaposizioan(0, 0, 0, ".\\img\\Plataformak.bmp");
+	irudiakargaposizioan(posberri.x, posberri.y, 1, ".\\img\\geldi.bmp");
+	irudiakargaposizioan(posberri.x, posberri.y, 2, ".\\img\\korrika1.bmp");
+	irudiakargaposizioan(posberri.x, posberri.y, 3, ".\\img\\korrika2.bmp");
+	irudiakargaposizioan(posberri.x, posberri.y, 4, ".\\img\\korrika3.bmp");
+	irudiakargaposizioan(posberri.x, posberri.y, 5, ".\\img\\geldiezker.bmp");
+	irudiakargaposizioan(posberri.x, posberri.y, 6, ".\\img\\korrika1ezker.bmp");
+	irudiakargaposizioan(posberri.x, posberri.y, 9, ".\\img\\korrika2ezker.bmp");
+	irudiakargaposizioan(posberri.x, posberri.y, 8, ".\\img\\korrika3ezker.bmp");
 }
-void mugimenduhorizontala(int *Vx, int *inertzia, int *eskuina) {
-	ebentu = ebentuaJasoGertatuBada();
-	if (ebentu == TECLA_RIGHT) {
-		*Vx = 10;
-		*inertzia = 3;
-		*eskuina = 1;
+void jauzia(int *Vy,int *salto) {
+	if (ebentu == TECLA_SPACE && *salto == 0) {
+
+		*Vy = -27;
+		*salto = 1;
+		soinua(".\\sound\\jauzia.wav", 6);
 	}
-	if (ebentu == TECLA_LEFT) {
-		*Vx = -10;
-		*inertzia = -3;
-		*eskuina = 0;
+}
+void ibaia(int *animazio,int *hondoratu, float *t,int *Vy,int *hil) {
+	if (chocacon(imagenak[*animazio].x, imagenak[*animazio].y, 40, 60, 574, 601, 200, 118 == 1)) {
+
+		(*hondoratu)++;
+		*Vy = 5;
+		*t = 1;
+		*hil = 1;
+
+
 	}
-	posberri.x = posberri.x + *Vx;
+}
+
+void grabitatea(int *hondoratu, int *Vy,int AzeY, float *t,int *aldaketa) {
+	if (*hondoratu == 0)Vy = Vy + (int)(AzeY * *t) ;
+	*aldaketa = (int)(*t * *Vy);
+	if (*aldaketa > 25) { (*aldaketa) = 25; }
+	posberri.y = posberri.y + *aldaketa;
+	*t = *t + (float)0.05;
+}
+int plataformapuntuazioa(int puntuazioa, int hil) {
+	if (puntuazioa > 300)puntuazioa = 3;
+	else {
+		if (puntuazioa > 0)puntuazioa = 2;
+		else puntuazioa = 1;
+	}
+	if (hil == 1)puntuazioa = 0;
+	return puntuazioa;
+}
+int plataformamaitu(int animazio) {
+	int amaiera = 0;
+	if (chocacon(imagenak[animazio].x, imagenak[animazio].y, 40, 60, 574, 690, 200, 50 == 1) || chocacon(imagenak[animazio].x, imagenak[animazio].y, 40, 60, 1070, 550, 40, 80 == 1)) {
+		amaiera = 1;
+	}
+	return amaiera;
+}
+void ibiltzesoinua(int *soinudenbora, int inertzia, int salto) {
+	(*soinudenbora)--;
+	if (inertzia != 0 && *soinudenbora < 0 && salto == 0 && posberri.y>130) {
+		soinua(".\\sound\\korrika.wav", 7);
+		*soinudenbora = 20;
+	}
 }

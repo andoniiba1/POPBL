@@ -12,11 +12,7 @@ int redes(void) {
     pantailaGarbitu();
     redesmarkoak();
 
-    irudiakpantailaratu(50, 100, 0, ".\\img\\a.bmp");
-    irudiakpantailaratu(50, 300, 1, ".\\img\\b.bmp");
-    irudiakpantailaratu(50, 500, 2, ".\\img\\c.bmp");
-    irudiakpantailaratu(175, 125, 3, ".\\img\\redesjokoa.bmp");
-	irudiakpantailaratu(920, 620, 4, ".\\img\\gezia1.bmp");
+	redeskargatu();
 
     pantailaBerriztu();
 
@@ -35,6 +31,7 @@ int redes(void) {
 		itxi();
 
     }
+	return 0;
 }
 void irudimugimendua(int irudizenbakia) {
     int a, b, c;
@@ -114,4 +111,11 @@ int redespuntuazioa(void) {
         kont++;
     }
     return kont;
+}
+void redeskargatu(void) {
+	irudiakpantailaratu(50, 100, 0, ".\\img\\a.bmp");
+	irudiakpantailaratu(50, 300, 1, ".\\img\\b.bmp");
+	irudiakpantailaratu(50, 500, 2, ".\\img\\c.bmp");
+	irudiakpantailaratu(175, 125, 3, ".\\img\\redesjokoa.bmp");
+	irudiakpantailaratu(920, 620, 4, ".\\img\\gezia1.bmp");
 }

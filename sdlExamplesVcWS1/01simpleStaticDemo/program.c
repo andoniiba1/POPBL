@@ -89,15 +89,7 @@ int aukerak(char* aukera1, char* aukera2, char* aukera3) {
     pantailaGarbitu();
 	irudiakpantailaratu(0, 0, 0, ".\\img\\programaukerak.bmp");
 	irudiakpantailaratu(920, 580, 1, ".\\img\\gezia1.bmp");
-    letratamaina(25);
-    
-    markoamarraztu(marko[0].x1, marko[0].y1, marko[0].x2, marko[0].y2, 5, 0XF0, 0XF0, 0X00);
-    textuaIdatzi(marko[0].x1+10, marko[0].y1+30, aukera1, 0X00, 0X00, 0X00);
-	markoamarraztu(marko[1].x1, marko[1].y1, marko[1].x2, marko[1].y2, 5, 0XF0, 0XF0, 0X00);
-    textuaIdatzi(marko[1].x1 + 10, marko[1].y1 + 30, aukera2, 0X00, 0X00, 0X00);
-	markoamarraztu(marko[2].x1, marko[2].y1, marko[2].x2, marko[2].y2, 5, 0XF0, 0XF0, 0X00);
-    textuaIdatzi(marko[2].x1 + 10, marko[2].y1 + 30, aukera3, 0X00, 0X00, 0X00);
-	letratamaina(30);
+	markoerantzunak(aukera1,aukera2,aukera3);
     pantailaBerriztu();
 
     while (pantailak == JOKOA) {
@@ -128,6 +120,7 @@ int aukerak(char* aukera1, char* aukera2, char* aukera3) {
 		itxi();
 
     }
+	return 0;
 }
 void aukeratu(int aukera) {
     /*
@@ -168,4 +161,15 @@ void markodatuak(void) {
 	marko[2].y1 = 275;
 	marko[2].x2 = 1050;
 	marko[2].y2 = 375;
+}
+void markoerantzunak(char* aukera1, char* aukera2, char* aukera3) {
+	letratamaina(25);
+
+	markoamarraztu(marko[0].x1, marko[0].y1, marko[0].x2, marko[0].y2, 5, 0XF0, 0XF0, 0X00);
+	textuaIdatzi(marko[0].x1 + 10, marko[0].y1 + 30, aukera1, 0X00, 0X00, 0X00);
+	markoamarraztu(marko[1].x1, marko[1].y1, marko[1].x2, marko[1].y2, 5, 0XF0, 0XF0, 0X00);
+	textuaIdatzi(marko[1].x1 + 10, marko[1].y1 + 30, aukera2, 0X00, 0X00, 0X00);
+	markoamarraztu(marko[2].x1, marko[2].y1, marko[2].x2, marko[2].y2, 5, 0XF0, 0XF0, 0X00);
+	textuaIdatzi(marko[2].x1 + 10, marko[2].y1 + 30, aukera3, 0X00, 0X00, 0X00);
+	letratamaina(30);
 }

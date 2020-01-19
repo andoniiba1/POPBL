@@ -78,6 +78,9 @@
     <ClCompile Include="musika.c">
       <Filter>Source Files\gure funtzioak</Filter>
     </ClCompile>
+    <ClCompile Include="mugikolisioak.c">
+      <Filter>Source Files\gure funtzioak</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="OurTypes.h">
@@ -132,6 +135,9 @@
       <Filter>Header Files\gure headerrak</Filter>
     </ClInclude>
     <ClInclude Include="musika.h">
+      <Filter>Header Files\gure headerrak</Filter>
+    </ClInclude>
+    <ClInclude Include="mugikolisioak.h">
       <Filter>Header Files\gure headerrak</Filter>
     </ClInclude>
   </ItemGroup>

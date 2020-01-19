@@ -13,31 +13,14 @@
 #include"matematika.h"
 #include"plataformak.h"
 #include"oinarri.h"
+#include"redes.h"
+#include"iratzarri.h"
 #include"fisika.h"
 #include"musika.h"
-
-
-
-
-#define HISTORIA "agur hoal agur hola agur hola agur asas assd adsada adas adsdas adsa adssdad adsdas asdda adsdad adsda adsda adsda"
-#define HISTORIA2 "agur hoal agur hola agur hola agur asas assd adsada adas adsdas adsa adssdad adsdas asdda adsdad adsda adsda adsda eta asad asdasd ada"
-
-
-#define OINARRIONA ""
-#define OINARRITXARRA ""
-
-
-
-
-
-
-
 
 int jokoa(void);
 
 void egunpantaila(int eguna);
-
-
 
 
 int main(int argc, char* str[])
@@ -102,6 +85,7 @@ int main(int argc, char* str[])
         }
         toggleMusic();
     }
+	return 0;
 }
 
 
@@ -113,8 +97,8 @@ int jokoa(void)
     int puntuazioiratzarri,puntuazioplataforma,puntuazioklase,eguna=0,egunekopuntuak=0,astekopuntuak=0;
 	historia(AZALPENGENERALA);
     while (pantailak == JOKOA) {
-		puntuazioiratzarri = matematika();
-		/*puntuazioiratzarri = 0;
+		
+		puntuazioiratzarri = 0;
 		puntuazioplataforma = 0;
 		puntuazioklase = 0;
 	
@@ -175,7 +159,7 @@ int jokoa(void)
 				}
 				if (pantailak == JOKOA) { pantailak = MENUA; }
 			}
-		}*/
+		}
        
 		
         

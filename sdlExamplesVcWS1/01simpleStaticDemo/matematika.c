@@ -5,6 +5,8 @@
 #include "imagen.h"
 #include <stdio.h>
 #include "OurTypes.h"
+#include <time.h>
+#include<stdlib.h>
 
 #include "matematika.h"
 int matematika(void) {
@@ -22,7 +24,7 @@ int matematika(void) {
 
 	pantailaBerriztu();
 
-	srand(time(NULL));
+	srand((int)time(NULL));
 	while (mantendu == 0 && pantailak == JOKOA)
 	{
 		ebentu = ebentuaJasoGertatuBada();
@@ -36,11 +38,9 @@ int matematika(void) {
 		}
 		itxi();
 
-		if (aldatu == 2 && geldi == 0)x = x + (2 + azelerazio);
+		maisumugimendua(aldatu,geldi,&x,azelerazio);
 
-		if (aldatu == 3 && geldi == 0)x = x - (2 + azelerazio);
-
-		mantendu = harrapatu(x, gora, aldatu);
+		mantendu = harrapatu(x, gora, aldatu, &puntuazioa);
 
 		kronometroa[0] = '2' + geio2;
 		kronometroa[1] = '0' + segunduak;
@@ -63,35 +63,22 @@ int matematika(void) {
 		if (geldidenbora > 50)
 		{
 
-			if (aldatu == 2)aldatu = 3;
-			else aldatu = 2;
-
-			puntuazioa = mateaktualizatu(gora, puntuazioa, aldatu, kronometroa);
-			rebote++;
-			if (rebote == 5) {
-				azelerazio++;
-				rebote = 0;
-			}
-			geldidenbora = 0;
-			geldi = 0;
-			egon = 0;
+			buelta(&aldatu,&puntuazioa,gora,kronometroa,&rebote,&azelerazio,&geldidenbora,&geldi,&egon);
 		}
 
 		else
 		{
-			irudiaMugitu(imagenak[aldatu].id, x, y);
-			puntuazioa = mateaktualizatu(gora, puntuazioa, aldatu, kronometroa);
-			SDL_Delay(10);
-
+			segi(aldatu,x,y,gora,kronometroa,&puntuazioa);
 
 		}
+		
 	}
 	soinua(".\\sound\\arrapatuta.wav", 8);
 	SDL_Delay(2000);
-	return puntuazioa / 200;
+	puntuazioa=matepuntuazioa(puntuazioa);
+	return puntuazioa;
 }
-
-int harrapatu(int x, int gora, int aldatu) {
+int harrapatu(int x, int gora, int aldatu, int *puntuazioa) {
 	int ikusi = 0;
 	if (gora == 1 && x > 0 && x < 310 && aldatu == 2)
 	{
@@ -103,6 +90,7 @@ int harrapatu(int x, int gora, int aldatu) {
 
 		ikusi = 1;
 	}
+	if (ikusi == 1)*puntuazioa = 0;
 	return ikusi;
 }
 int mateaktualizatu(int gora, int puntuazioa, int aldatu, char* kronometroa) {
@@ -147,5 +135,41 @@ void krono20(int* bigarrena, int* lehena, int* segunduak, int* geio2, int* geio,
 
 		*mantendu = 1;
 	}
+
+}
+int matepuntuazioa(int puntuazioa) {
+	if (puntuazioa == 1)puntuazioa = 0;
+	if (puntuazioa != 0) {
+		if (puntuazioa <= 200)puntuazioa = 1;
+		else {
+			if (puntuazioa > 200 && puntuazioa <= 400)puntuazioa = 2;
+			else puntuazioa = 3;
+		}
+	}
+	return puntuazioa;
+}
+void maisumugimendua(int aldatu,int geldi,int *x,int azelerazio) {
+	if (aldatu == 2 && geldi == 0)*x = *x + (2 + azelerazio);
+
+	if (aldatu == 3 && geldi == 0)*x = *x - (2 + azelerazio);
+}
+void buelta(int *aldatu, int *puntuazioa,int gora,char* kronometroa,int *rebote,int *azelerazio,int *geldidenbora,int *geldi,int *egon) {
+	if (*aldatu == 2)*aldatu = 3;
+	else *aldatu = 2;
+
+	*puntuazioa = mateaktualizatu(gora, *puntuazioa, *aldatu, kronometroa);
+	(*rebote)++;
+	if (*rebote == 5) {
+		(*azelerazio)++;
+		*rebote = 0;
+	}
+	*geldidenbora = 0;
+	*geldi = 0;
+	*egon = 0;
+}
+void segi(int aldatu,int x,int y,int gora,char* kronometroa,int *puntuazioa) {
+	irudiaMugitu(imagenak[aldatu].id, x, y);
+	*puntuazioa = mateaktualizatu(gora, *puntuazioa, aldatu, kronometroa);
+	SDL_Delay(10);
 
 }

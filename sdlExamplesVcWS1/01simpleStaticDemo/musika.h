@@ -12,9 +12,9 @@
 
 
 
-	void musikahasi(char* izena);
-	void soinuakkargatu(void);
-	void soinua(char *izena,int soinuzenbakia);
+	void musikahasi(char* izena);//Emandako kantua jartzen du buklean
+	void soinuakkargatu(void);//Soinu guztiak kargatzen ditu
+	void soinua(char *izena,int soinuzenbakia);//Soinu bat erreproduzitzen du
 	
 
 #endif

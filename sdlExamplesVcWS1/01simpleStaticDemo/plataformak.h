@@ -10,18 +10,25 @@
 #include "testua.h"
 #include "irudiformak.h"
 #include "musika.h"
+#include "mugikolisioak.h"
+#include "hasierako pantailak.h"
 
-POSIZIOA posberri;
+
 PLATAFORMAK plataform[32];
 
-int plataformak(void);
-void plataformdatuak(void);
-int plataformatxokea(int x, int y, int widht, int height);
-int chocacon(int x1, int y1, int widht1, int height1, int x2, int y2, int widht2, int height2);
-void posizioaaktualizatu(void);
-void posizioamantendu(void);
-void erorketa(int* salto, int* t,int *aldaketa);
-void animaziofuntzioa(int* inertzia, int* kont, int* animazio, int* eskuina, int* ezker);
-void mugimenduhorizontala(int* Vx, int* inertzia, int* eskuina);
+int plataformak(void);//plataformen funtzio nagusia
+void plataformdatuak(void);//plataforma bakoitzaren hitboxa
+int plataformatxokea(int x, int y, int widht, int height);//plataformaren bat ukitzen al duen
+void posizioaaktualizatu(void);//kalkulatu ondoren posizio berrira mugitzeko irudiak
+void posizioamantendu(void);//aurreko kalkuluan zuen posizioa mantentzeko irudietan
+void erorketa(int* salto, float* t,int *aldaketa);//plataformak albotik jotzen dituenean erortzen segitzeko
+void plataformakkargatu(void);//plataformetako irudia eta animazioak kargatu
+void jauzia(int* Vy, int* salto);//jauzia egin
+void ibaia(int *animazio, int* hondoratu, float* t, int* Vy, int* hil); //uretara erortzea detektatu
+void inertziajaitsi(int* inertzia, int* Vx);//inertzia jaitsi eta gelditu
+void grabitatea(int *hondoratu, int* Vy, int AzeY, float* t, int* aldaketa);//grabitataren eragina kalkulatu
+int plataformapuntuazioa(int puntuazioa, int hil);//plataformetako puntuazioa kalkulatzen du eta itzuli
+int plataformamaitu(int animazio);//Plataformen jokoa bukatu den itzultzen du
+void ibiltzesoinua(int* soinudenbora, int inertzia, int salto);//iblitzeko soinua erreproduzitzen du
 
 #endif

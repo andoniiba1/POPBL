@@ -159,6 +159,7 @@
     <ClCompile Include="irudiformak.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="matematika.c" />
+    <ClCompile Include="mugikolisioak.c" />
     <ClCompile Include="musika.c" />
     <ClCompile Include="oinarri.c" />
     <ClCompile Include="plataformak.c" />
@@ -177,6 +178,7 @@
     <ClInclude Include="iratzarri.h" />
     <ClInclude Include="irudiformak.h" />
     <ClInclude Include="matematika.h" />
+    <ClInclude Include="mugikolisioak.h" />
     <ClInclude Include="musika.h" />
     <ClInclude Include="oinarri.h" />
     <ClInclude Include="OurTypes.h" />

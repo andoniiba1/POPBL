@@ -46,6 +46,7 @@ typedef struct MARKO
 IRUDIAK imagenak[32];
 PANTAILAK pantailak;
 POSIZIOA pos;
+POSIZIOA posberri;
 int ebentu;
 int soniduak[SOINUKOP];
 
