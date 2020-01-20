@@ -28,4 +28,5 @@ void menuraitzuli(void);//menura itzultzeko
 void instrukziobakoitza(int jokoinstrukzioa, char* izena);//Joko bakoitzeko instrukzioak pantailaratu eta nahi gezian klik eginda instrukzio generaletara itzuli
 void botoidatuak(void);//Instruzioetako botoien posizioen datuak
 void fletxabuklehurrengoa(void);//Eskuinean behean agertzen den geziari eman arteko buklea
+void egunpantaila(int eguna);//eguneko zenbakia azaltzen duen pantaila
 #endif

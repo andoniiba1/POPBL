@@ -44,7 +44,7 @@
 #define FISIKAGAIZKI "Kotxeak ez du lerroa behar bezala jarraitu baina irakaslea nahikoa umore onez zegoenez datorren asterarte utzi dizu kotxeak arazorik gabe funtzionatu dezan. Baina biok dakigunez ez duzula lanik egingo, hobe duzu pila berriak erostera joan."
 #define FISIKAOSOGAIZKI "Zure ideia desastre bat izan da! Nola izango zenuen mando bat konektatzeko ideia. Orain zero bat edukitzeaz gain zure gelakide guztiek barre egiten dizute aurpegira. Baina informatiko baten bizitzan lagunik ez edukitzeak ez duenez gehiegi inporta ez da horrenbesteko arazoa izango. Zu lasai."
 #define EGUNONA "Zorionak zure eguneko eginkizunen batezbestekoa begiratuta, emaitza oso ona izan da. Honela jarraituaz gero PoPBL-raino iritsi zintezke hori bai informatikako titulua eskuratzea ez da lan erraza izango."
-#define EGUNERTAINA "Garko eguna onargarria izan da baina PoPBL-an parte hartu nahi baduzu zerbait gehiago egiten hasi beharko duzu."
+#define EGUNERTAINA "Gaurko eguna onargarria izan da baina PoPBL-an parte hartu nahi baduzu zerbait gehiago egiten hasi beharko duzu."
 #define EGUNTXARRA "Zure gaurko eguna desastre total bat izan da. Karrera gainditu nahi izanez gero hobe duzu espabilatu."
 #define ASTEONA "Zure asteak nire espektatiba guztiak gainditu ditu. Agian joko txoroak alde batera utzi eta benetako karreran sartzea pentsatu beharko zenuke."
 #define ASTEERTAINA "Ez dut uste inoiz informatikako titulua eskuratuko duzunik baina agian gogor ahaleginduaz gero hirugarren urterarte iritsi zintezke. "

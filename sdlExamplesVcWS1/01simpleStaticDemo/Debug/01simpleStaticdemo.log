@@ -1,3 +1,21 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(452,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (01simpleStaticDemo.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  ebentoak.c
+  graphics.c
+  imagen.c
+  soinua.c
+  text.c
+  fisika.c
+  hasierako pantailak.c
   iratzarri.c
-  01simpleStaticDemo.vcxproj -> C:\Users\andoi\Desktop\sdlExamplesVcWS1\Debug\STUDENTS LIFE.exe
+  irudiformak.c
+  main.c
+  matematika.c
+  mugikolisioak.c
+  musika.c
+  oinarri.c
+  plataformak.c
+  program.c
+  redes.c
+  testua.c
+  Generando código...
+  01simpleStaticDemo.vcxproj -> C:\Users\andoi\Documents\Unibersidad\program\1.semestre\POPBL\sdlExamplesVcWS1\Debug\STUDENTS LIFE.exe

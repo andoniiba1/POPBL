@@ -208,3 +208,45 @@ void botoidatuak(void){
 	botoia[6].y2 = 575;
 	
 }
+void egunpantaila(int eguna)
+{
+	int bai = 0;
+	pantailaGarbitu();
+
+
+	irudiakpantailaratu(0, 0, 0, ".\\img\\EGIL.bmp");
+	irudiakpantailaratu(920, 580, 1, ".\\img\\gezia1.bmp");
+	letratamaina(100);
+
+	switch (eguna)
+	{
+
+	case 1:
+		textuaIdatzi(300, 50, "1.EGUNA", 0, 0, 0);
+		break;
+
+	case 2:
+		textuaIdatzi(300, 50, "2.EGUNA", 0, 0, 0);
+		break;
+
+	case 3:
+		textuaIdatzi(300, 50, "3.EGUNA", 0, 0, 0);
+		break;
+
+	case 4:
+		textuaIdatzi(300, 50, "4.EGUNA", 0, 0, 0);
+		break;
+
+	case 5:
+		textuaIdatzi(300, 50, "5.EGUNA", 0, 0, 0);
+		break;
+
+
+
+	}
+
+	letratamaina(30);
+	pantailaBerriztu();
+	fletxabuklehurrengoa();
+
+}
